@@ -1,0 +1,58 @@
+{
+	"0001":{
+		"catalog":"小米手机",
+		"sub":{
+			"imgUrl":"img/nav/1-phone(1).jpg|img/nav/1-phone(2).jpg|img/nav/1-phone(3).jpg|img/nav/1-phone(4).jpg",
+			"detail":"小米Max|小米5|小米4S|小米4c",
+			"price":"1499元起|1999元起|1699元起|1099元起"
+		}
+	},
+	"0002":{
+		"catalog":"红米手机",
+		"sub":{
+			"imgUrl":"img/nav/2-phone(1).jpg|img/nav/2-phone(2).jpg|img/nav/2-phone(3).jpg",
+			"detail":"红米Note3|红米3|红米3S",
+			"price":"899元起|699元起|699元起"
+		}
+	},
+	"0003":{
+		"catalog":"平板",
+		"sub":{
+			"imgUrl":"img/nav/3-pad(1).jpg|img/nav/3-pad(2).jpg|img/nav/3-pad(3).jpg",
+			"detail":"小米平板2 16G|小米平板2 64G|小米平板64G window版",
+			"price":"999元|1299元|1299元"
+		}
+	},
+	"0004":{
+		"catalog":"小米电视",
+		"sub":{
+			"imgUrl":"img/nav/4-tv(1).jpg|img/nav/4-tv(2).jpg|img/nav/4-tv(3).jpg|img/nav/4-tv(4).jpg|img/nav/4-tv(5).jpg",
+			"detail":"小米电视3s 43英寸|小米电视3 48英寸|小米电视3 55英寸|小米电视3 60英寸|小米电视3 65英寸",
+			"price":"1799元|1999元|3999元起|4999元起|8999元"
+		}
+	},
+	"0005":{
+		"catalog":"盒子·影音",
+		"sub":{
+			"imgUrl":"img/nav/5-tv(1).jpg|img/nav/5-tv(2).jpg",
+			"detail":"小米盒子 增强版|小米家庭影音 套装版",
+			"price":"399元|699元"
+		}
+	},
+	"0006":{
+		"catalog":"路由器",
+		"sub":{
+			"imgUrl":"img/nav/6-wifi(1).jpg|img/nav/6-wifi(2).jpg|img/nav/6-wifi(3).jpg|img/nav/6-wifi(4).jpg|img/nav/6-wifi(5).jpg",
+			"detail":"全新小米路由器|小米路由器3|小米路由器 mini|小米路由器 青春版|小米WiFi放大器",
+			"price":"699元起|149元|129元|79元|39元"
+		}
+	},
+	"0007":{
+		"catalog":"智能硬件",
+		"sub":{
+			"imgUrl":"img/nav/7-others(1).jpg|img/nav/7-others(2).jpg|img/nav/7-others(3).jpg|img/nav/7-others(4).jpg|img/nav/7-others(5).jpg",
+			"detail":"米家压力IH电饭煲|九号平衡车|体重秤|摄像机|查看全部",
+			"price":"999元|1999元|99元|149元|智能硬件"
+		}
+	}
+}

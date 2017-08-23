@@ -1,0 +1,23 @@
+*{margin:0;padding:0;}
+
+header h1{width:100%;line-height:80px;text-align:center;box-shadow:0 0 10px #333;margin-bottom:10px;}
+
+aside{width:40vw;height:80vh;border-right:1px solid #aaa;float:left;padding:20px 0 0 20px;}
+aside *{display:block;}
+aside label{font-size:1.5em;color:#333;line-height:2;}
+aside input{width:90%;height:40px;border:1px solid #ccc;border-radius:5px;outline:none;font-size:1.8em;
+	text-indent:30px;}
+aside textarea{width:90%;height:200px;border:1px solid #ccc;border-radius:5px;outline:none;}
+aside input[type=submit]{margin-top:10px;cursor:pointer;}
+aside input[type=reset]{margin-top:10px;cursor:pointer;}
+aside input[type=button]{margin-top:10px;cursor:pointer;}
+
+section{width:55vw;height:80vh;background:#f1f1f1;float:right;padding:20px 0 0 30px;overflow: auto;}
+section .hidden{display:none;}
+section .cont{width:90%;height:auto;margin-bottom:10px;border:1px solid #ccc;border-radius:10px;
+		position:relative;}
+section .cont h2{font-size:1.2em;line-height:40px;}
+section .cont p:nth-of-type(1){font-size:1.2em;line-height:40px;font-weight:900;}
+section .cont p:nth-of-type(2){font-size:1.2em;line-height:30px;}
+section .cont button{width:60px;height:40px;border:1px solid #ccc;border-radius:5px;position:absolute;
+		right:15px;top:15px;outline:none;cursor:pointer;}

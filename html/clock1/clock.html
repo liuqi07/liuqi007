@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="clock"></div>
+	</body>
+	<script type="text/javascript" src="js/jquery-1.12.4.js" ></script>
+	<script type="text/javascript">
+		var Clock = function(size){
+			this.size = size || 500;
+			this.pan;
+			this.scale;
+			this.second;
+			this.minute;
+			this.hours;
+		}
+		Clock.prototype = {
+			init:function(){						//初始化方法
+				this.makePan();	
+				this.makeScale();
+				this.makeSecond();
+				this.makeMinute();
+				this.makeHours();
+				this.makeMoveP();
+			},
+			makePan:function(){						//制作表盘
+				this.pan = $("<div>").css({
+					width:this.size,
+					height:this.size,
+					border:"5px solid #333",
+					borderRadius:"50%",
+					position:"relative",
+					margin:"30px auto"
+				}).appendTo($("#clock"));
+				$("<div>").css({
+					width:"20px",
+	                height:"20px",
+	                background:"#333",
+	                borderRadius:"50%",
+	                position:"absolute",
+	                left:0,
+	                top:0,
+	                right:0,
+	                bottom:0,
+	                zIndex:3,
+	                margin:"auto"
+				}).appendTo(this.pan);
+			},
+			makeScale:function(){					//制作刻度
+				var w,h;
+				for(var i=0;i<60;i++){
+					if(i%5==0){
+							w = "3px";
+							h = "15px";
+						}else{
+							w = "1px";
+							h = "10px";
+						}
+					this.scale = $("<span>").css({
+						width:w,
+						height:h,
+						background:"#333",
+						position:"absolute",
+						left:0,right:0,
+						margin:"0 auto",
+						transformOrigin:"center 250px",
+						transform:"rotate("+ 6*i +"deg)"
+					}).appendTo(this.pan);
+				}
+				var m=12;
+				for(var i=0;i<60;i++){
+					if(i%5==0){
+						$("<div class = 'num'>").html(m).css({
+							width:"20px",height:"20px",
+							fontSize:"40px",
+							position:"absolute",
+							left:0,right:0,
+							margin:"20px auto",
+							transformOrigin:"center 230px",
+							transform:"rotate("+ 6*i +"deg)"
+						}).appendTo(this.pan);
+						m++;
+						m= m>12 ? 1 : m;
+					}
+				}
+				//
+				$(".num").each(function(index){
+					//alert(index)
+					//$(".num").eq(index).css({transformOrigin:"top top",transform:"rotate("+ (30*index) +"deg)"});
+				})
+			},
+			makeSecond:function(){					//制作秒针
+				this.second = $("<div>").css({
+					width:"2px",
+					height:"220px",
+					background:"red",
+					position:"absolute",
+					left:0,
+					right:0,
+					margin:"30px auto",
+					transformOrigin:"center 220px"
+				}).appendTo(this.pan);
+			},
+			makeMinute:function(){					//制作分针
+				this.minute = $("<div>").css({
+					width:"4px",
+					height:"190px",
+					background:"blue",
+					position:"absolute",
+					left:"0",
+					right:"0",
+					margin:"60px auto",
+					transformOrigin:"center 190px"
+				}).appendTo(this.pan);
+			},
+			makeHours:function(){					//制作时针
+				this.hours = $("<div>").css({
+					width:"6px",
+					height:"160px",
+					background:"green",
+					position:"absolute",
+					left:"0",
+					right:"0",
+					margin:"90px auto",
+					transformOrigin:"center 160px"
+				}).appendTo(this.pan);
+			},
+			makeMoveP:function(){
+				var that = this;
+				function timer(){
+					var date = new Date();
+					var s = date.getSeconds();
+					var m = date.getMinutes();
+					var h = date.getHours();
+					that.second.css({
+						transform:"rotate("+ 6*s +"deg)"
+					});
+					that.minute.css({
+						//minute/360 hours/6
+						transform:"rotate("+ (6*m+0.1*s) +"deg)"
+					});
+					that.hours.css({
+						transform:"rotate("+ (30*h+0.5*m+s/120) +"deg)"
+					})
+				}
+				timer();
+				setInterval(timer,1000);
+			}
+			
+		}
+		
+		var clock = new Clock();
+		clock.init();
+	</script>
+</html>

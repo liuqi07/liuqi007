@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="shortcut icon" href=" img/favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="css/list.css"/>
+		<script type="text/javascript" src="js/jquery-1.12.4.js" ></script>
+		<script type="text/javascript" src="js/list.js" ></script>
+		<script type="text/javascript" src="js/cookie.js" ></script>
+		<script type="text/javascript">
+			$.ajaxSetup({
+				async:false
+			});
+		</script>
+	</head>
+	<body>
+		<!-- header(load) --------------------------------------->
+		<div id="header"></div>
+		<script type="text/javascript">
+			$("#header").load("header.html");
+		</script>
+		<!-- list -->
+		<!-- title -->
+		<div class="title-bj">
+			<div id = "title"><a href="index.html">首页</a><span> / 选购路由器 智能硬件</span></div>
+		</div>
+		<!-- channel-nav -->
+		<div class="channel-nav-bj">
+			<div id="channel-nav">
+				<ul class = "list">
+					<li class = "col">选购路由器 智能硬件</li>
+					<li>小米净水器</li>
+					<li>小米空气净化器2</li>
+					<li>九号平衡车</li>
+					<li>米家压力 IH 电饭煲</li>
+					<li>小米路由器mini</li>
+					<li>小米体重秤</li>
+					<li class = "btn">查看全部></li>
+				</ul>
+				<ul class = "list more-list">
+					<li>小米路由器</li>
+					<li>小蚁智能摄像机</li>
+					<li>小蚁运动相机</li>
+					<li>Yeelight床头灯</li>
+					<li>小米智能插座 基础班</li>
+					<li>iHealth智能血压计</li>
+					<li>智能硬件配件</li>
+				</ul>
+			</div>
+		</div>
+		<!-- banner -->
+		<div class="banner-bj">
+			<ul id="banner">
+				<li><img src="img/list/banner.jpg"</li>
+			</ul>
+		</div>
+		<!-- container 商品列表页 -->
+		<div class="container-bj">
+			<ul id = "container">	
+				<!--<li>
+					<a href = "javascript:;"><img src="img/list/list (1).jpg"/></a>
+					<div class="cont">
+						<h2><a href = "javascript:;">净水器(厨下式)</a><span>1999<em>元</em></span></h2>
+						<p>400加仑大流量，RO反渗透直出纯净水<br />隐藏安装，灯光水龙头</p>
+						<strong>立即购买</strong>
+					</div>
+				</li>-->
+			</ul>
+		</div>
+		<!-- 添加购物车成功相关操作 -->
+		<div id="success">
+			<div class="info">
+				<img src="img/list/list1.jpg"  />
+				<h2><a href="javascript:;">净水器（厨下式）</a><span>1999</span>元</h2>
+				<strong>已成功加入购物车！</strong>
+			</div>
+			<div class="btn">
+				<a class="close2" href="javascript:;">继续购物</a>
+				<a href="cart.html">去购物车结算</a>
+			</div>
+		</div>
+		<!-- mask 遮噪层-->
+		<div id="listMask"></div>
+		<!-- tips -->
+		<div class="tips">
+			<a href="javascript:;"><img src="img/list/other.jpg" /></a>
+		</div>
+		<div id="more-goods">
+			<h2>搭配更多智能硬件产品</h2>
+			<p>以小米手机为中心，控制智能硬件产品，轻松享受智能生活带来的方便和舒适</p>
+			<a href="javascript:;">查看更多智能硬件产品></a>
+		</div>
+		<ul id = "more-list">
+			<!--<li><a href="javascript:;"><img src="img/list/more (1).jpg" /></a><p>小米网络收音机</p><span>WiFi直连，畅听海量网络内容，独立解码，专业扬声器</span><strong>129元</strong></li>
+-->		</ul>
+		
+		
+		<!-- footer(load) -------------------------------------------->
+		<div id="footer"></div>
+		<script type="text/javascript">
+			$("#footer").load("footer.html");
+		</script>
+	</body>
+</html>

@@ -1,0 +1,22 @@
+/*----------------------------------------skill----------------------------------------------------------------*/
+#skill{width:100vw;height:100vh;background:#EEF3FA;position:absolute;display:flex;justify-content: center;
+		align-items: center;left:0;top:100vh;}
+#skill .main{width:85vw;height:85vh;background:#F5F5F5;overflow:auto;display:flex;justify-content:space-between;
+		position:relative;flex-direction:column;align-items:center;z-index:2;overflow:hidden;}
+		
+#skill .main .top{width:80%;height:30%;/*background:red;*/margin-top:2vw;}
+#skill .main .top h3{text-align: center;line-height:80px;font-size:3vw;}
+#skill .main .top span{display:block;width:16%;height:2px;background:#ccc;margin:0 auto;}
+#skill .main .top p{width:70%;height:40%;background:#ccc;margin :25px auto;text-align:center;line-height: 100%;
+		font-size:8vw;color:#333;}
+
+
+
+#skill .main .level{width:80%;height:60%;/*background:blue;margin-top:2vw;padding:3%;*/display:flex;
+		flex-flow:row wrap;justify-content:center;align-content:space-around;}
+#skill .main .level li{width:20%;height:45%;/*background:#ccc;*/margin-left:1%;position:relative;padding:10px;}
+#skill .main .level li canvas{position:absolute;left:0;right:0;margin:0 auto;}
+#skill .main .level li strong{display:block;width:100%;text-align:center;margin-top:22%;font-size:1.5vw;}
+#skill .main .level li strong i{font-style:normal;}
+#skill .main .level li .bl{width:0;height:0;position:absolute;z-index:-999;top:9999px;}
+#skill .main .level li p{width:100%;text-align:center;margin-top:40%;}

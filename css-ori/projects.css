@@ -1,0 +1,93 @@
+
+@media screen and (max-width:930px){
+	#projects .main .left{display:none;}
+	#projects .main .right{display:none;}
+	#projects .main .center{display:block;}
+}
+@media screen and (min-width:931px){
+	#projects .main .left{display:block;}
+	#projects .main .right{display:block;}
+	#projects .main .center{display:none;}
+}
+
+#projects{width:100vw;height:100vh;background:#BEBEBE;position:absolute;display:flex;justify-content: center;
+		align-items: center;left:0;top:-100vh;z-index:1;}
+#projects .mask{position:absolute;top:7.5vh;right:7vw;width:3vw;height:85vh;background:#CBCBCB;z-index:999;}
+#projects .mask .barbox{width:1vw;height:100%;background:#D4D4D4;position:absolute;top:0;right:0;padding:0 0.1vw;}
+#projects .mask .bar{display:block;width:0.8vw;height:25%;background:#3C3C3E;}
+
+
+#projects .main{width:85vw;height:85vh;background:#CBCBCB;display:flex;justify-content:center;
+		position:relative;overflow:auto;}
+
+/* 左侧列表  */
+#projects .main .left{width:340px;height:auto;position:relative;margin-top:50px;}
+/* 左侧列表中的每个div块 */
+#projects .main .left>div{width:100%;height:380px;position:relative;z-index:2;margin-bottom:30px;
+		border-right:2px solid #333;right:-1px;}
+#projects .main .left>div .point{width:20px;height:20px;background:#ccc;border-radius: 50%;position:absolute;right:-10px;
+		top:-10px;z-index:10;}
+#projects .main .left>div .point:before{content:"";display:block;width:40px;height:2px;background:#333;position:absolute;
+		top:10px;left:-40px;z-index:10;}
+#projects .main .left>div .point span{display: block;width:10px;height:10px;background:#333;border-radius: 50%;
+		position:absolute;left:0;right:0;top:0;bottom:0;margin:auto;z-index:10;}
+#projects .main .left>div h4{padding:0 20px;position:absolute;right:45px;top:-10px;font-size:18px;background:#ccc;z-index:10;}
+#projects .main .left>div h4 em{font-size:16px;font-weight:bold;font-style:normal;}
+#projects .main .left>div .img{width:300px;height:200px;position:absolute;left:20px;top:40px;overflow: hidden;}
+#projects .main .left>div .img img{width:300px;height:200px;transform:scale(1.1);transition:all .3s;}
+#projects .main .left>div .img .d{transform: scale(1);}
+#projects .main .left>div p{position:absolute;left:20px;bottom:90px;width:300px;height:30px;background:;text-align:right;
+		font-weight:bold;padding:0 10px;}
+#projects .main .left>div>span{display:block;position:absolute;left:20px;top:290px;background:;width:300px;
+		height:auto;text-align:right;padding:0 10px;color:#3C3C3E;font-size:14px;line-height:18px;}
+/* 三条会动的边框 */
+#projects .main .left>div .a{width:200px;height:2px;background:#333;position:absolute;right:138px;top:0;z-index:9;
+		transform:rotateY(-90deg);transform-origin:right top;transition:all .1s linear 0s;}
+#projects .main .left>div .aa{transform:rotateY(0deg);}
+#projects .main .left>div .b{width:2px;height:380px;background:#333;position:absolute;left:0;top:0;z-index:9;
+		transform:rotateX(-90deg);transform-origin:left top;transition:all .1s linear .1s;}
+#projects .main .left>div .bb{transform:rotateX(0deg);}
+#projects .main .left>div .c{width:340px;height:2px;background:#333;position:absolute;left:0;bottom:0;z-index:9;
+		transform:rotateY(-90deg);transform-origin:left top;transition:all .1s linear .2s;}
+#projects .main .left>div .cc{transform:rotateX(0deg);}
+/* 右侧列表 */
+#projects .main .right{width:340px;height:auto;position:relative;margin-top:20px;/*border-left:2px solid #333;left:-1px;*/}
+/* 右侧列表中的每个div块 */
+#projects .main .right>div{width:100%;height:380px;position:relative;z-index:1;margin-bottom:30px;
+		border-left:2px solid #333;left:-1px;}
+#projects .main .right>div .point{width:20px;height:20px;background:#ccc;border-radius: 50%;position:absolute;left:-10px;
+		top:-10px;z-index:4;}
+#projects .main .right>div .point:before{content:"";display:block;width:40px;height:2px;background:#333;position:absolute;
+		top:9px;left:20px;}
+#projects .main .right>div .point span{display: block;width:10px;height:10px;background:#333;border-radius: 50%;
+		position:absolute;left:0;right:0;top:0;bottom:0;margin:auto;z-index:5;}
+#projects .main .right>div h4{padding:0 20px;;position:absolute;left:45px;top:-10px;font-size:18px;background:#ccc;z-index:5;}
+#projects .main .right>div h4 em{font-size:16px;font-weight:bold;font-style:normal;}
+#projects .main .right>div .img{width:300px;height:200px;position:absolute;left:20px;top:40px;overflow:hidden;}
+#projects .main .right>div .img img{width:300px;height:200px;transform:scale(1.1);transition:all .3s;}
+#projects .main .right>div .img .d{transform:scale(1);}
+#projects .main .right>div p{position:absolute;left:20px;bottom:90px;width:300px;height:30px;background:;text-align:left;
+		font-weight:bold;padding:0 10px;}
+#projects .main .right>div>span{display:block;position:absolute;left:20px;top:290px;background:;width:300px;
+		height:auto;text-align:left;padding:0 10px;color:#3C3C3E;font-size:14px;line-height:18px;}
+/* 三条会动的边框 */
+#projects .main .right>div .a{width:200px;height:2px;background:#333;position:absolute;left:138px;top:0;z-index:2;
+		transform:rotateY(-90deg);transform-origin:left top;transition:all .1s linear 0s;}
+#projects .main .right>div .aa{transform:rotateY(0deg);}
+#projects .main .right>div .b{width:2px;height:380px;background:#333;position:absolute;right:0;top:0;z-index:2;
+		transform:rotateX(-90deg);transform-origin:right top;transition:all .1s linear .1s;}
+#projects .main .right>div .bb{transform:rotateX(0deg);}
+#projects .main .right>div .c{width:340px;height:2px;background:#333;position:absolute;right:0;bottom:0;z-index:2;
+		transform:rotateY(-90deg);transform-origin:right top;transition:all .1s linear .2s;}
+#projects .main .right>div .cc{transform:rotateY(0deg);}
+
+/* 小屏下显示的内容 */
+#projects .main .center{width:100%;height:auto;padding:5%;}
+#projects .main .center>div{width:100%;height:auto;overflow: hidden;position:relative;z-index:10;margin-bottom:30px;}
+#projects .main .center>div h4{padding:0 20px;font-size:18px;background:#ccc;}
+#projects .main .center>div h4 em{font-size:16px;font-weight:bold;font-style:normal;}
+#projects .main .center>div .img{width:100%;height:60%;margin:4% 0 1%;overflow:hidden;}
+#projects .main .center>div .img img{width:100%;height:100%;transform:scale(1.1);transition:all .3s;}
+#projects .main .center>div .img .d{transform:scale(1);}
+#projects .main .center>div p{padding:0 10px;height:50px;line-height:50px;font-size:18px;color:#333;font-weight: bold;}
+#projects .main .center>div>span{display:block;padding:0 10px;font-size:14px;line-height:18px;text-indent:10px;}

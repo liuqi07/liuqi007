@@ -1,0 +1,17 @@
+
+{
+	"left":{
+		"title":["美月淘","小米网","音乐播放器","简易备忘录"],
+		"title2":["HTML+CSS+jQuery","HTML+CSS+jQuery","Audio","H5本地存储"],
+		"imgUrl":["img/img/myt.png","img/img/mi.jpg","img/img/musicPlayer.jpg","img/img/notepad.jpg"],
+		"url":["http://www.meiyuetao.com/","html/mi_com/index.html","html/musicPlayer/index.html","html/notepad/notepad.html"],
+		"cont":["从立项到项目完成再到后期维护，自己从头到尾一直都在参与，目前已经上线","小米网是自己利用闲暇时间独立完成的一个作品，功能完善的还是比较全面的，首页的所有效果、列表页、登陆注册、购物车、以及购物车计价功能基本都完成了。","通过H5新增的audio标签，再加上一定的逻辑判断，实现的建议的音乐播放器","一个简易、但是非常实用的本地备忘录，功能还在增加中，实现的方法也是通过H5新增的本地存储来实现的"]	
+	},
+	"right":{
+		"title":["小米网/移动端","扫雷","放烟花","简易时钟"],
+		"title2":["webapp","原生js","面向对象","面向对象"],
+		"imgUrl":["img/img/m_mi_com.jpg","img/img/saolei.jpg","img/img/yanhua.jpg","img/img/clock1.jpg"],
+		"url":["html/m_mi_com/index.html","html/saolei/saolei.html","html/yanhua/yanhua.html","html/clock1/clock.html"],
+		"cont":["现在比较火的webapp，同样是利用闲暇时间写的一个作品，主要使用了swiper、iscroll、touch.js等插件来实现，同时也做了移动端的六大主流浏览器的兼容","这个是完全模仿win7系统自带的扫雷游戏，使用原生js编写的，在实现了基础功能上，也添加了一些额外的功能","没事喜欢逛网站，偶然发现这样一个烟花的效果，正好自己拿来练手，用面向对象写了，恩，效果还阔以~~","使用面向对象写的一个时钟，再稍加修饰，也勉强可以做个插件用了^_^"]	
+	}
+}

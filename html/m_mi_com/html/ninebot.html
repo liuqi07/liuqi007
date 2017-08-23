@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../css/swiper-3.3.1.min.css"/>
+    <link rel="stylesheet" href="../fonts/iconfont.css"/>
+    <link rel="stylesheet" href="../css/ninebot.css"/>
+
+</head>
+<body>
+<div id="wrapper">
+    <div id="scroller">
+        <section id="wkf_box">
+            <!--===============================头部============================-->
+            <header>
+                <span id="fan"><img src="../img/ninebot/left.png" alt=""/></span>
+                <span id="sou" class="iconfont icon-sousuo"></span>
+            </header>
+            <!--=====================================详情==========================-->
+            <article>
+                    <div id="wkf_tu">
+                        <img src="" alt=""/>
+                        <!--<img class="di1" src="../img/ninebot/heicar.jpg" alt=""/>-->
+                    </div>
+                    <div id="wkf_center">
+                        <div class="name"><p></p></div>
+                        <div class="price"><strong></strong></div>
+                        <div class="b1 iconfont icon-fenxiang01"></div>
+                        <div class="b2"><p>年轻人的酷玩具 / 骑行遥控两种玩法 / 22公里超长续航  / 轻、小、便携 / 重心驱动 / 15重安全保障</p></div>
+                        <div class="b3">
+                            <ul>
+                                <li class="bo">至尊版</li>
+                            </ul>
+                        </div>
+                    </div>
+                <!--==========================轮播=====================-->
+                    <div id="wkf_bottom">
+                        <p>为您推荐</p>
+                        <div id="wkf_bottom_tu" >
+                            <div class="swiper-container swiper-container-horizontal">
+                                <div class="swiper-wrapper">
+                                    <div style="width: 435.333px; margin-right: 30px;" class="swiper-slide swiper-slide-active"><img src="../img/ninebot/lbt/1.jpg"/></div>
+                                    <div style="width: 435.333px; margin-right: 30px;" class="swiper-slide swiper-slide-next"><img src="../img/ninebot/lbt/2.jpg"/></div>
+                                    <div style="width: 435.333px; margin-right: 30px;" class="swiper-slide"><img src="../img/ninebot/lbt/3.jpg"/></div>
+                                    <div style="width: 435.333px; margin-right: 30px;" class="swiper-slide"><img src="../img/ninebot/lbt/4.jpg"/></div>
+                                    <div style="width: 435.333px; margin-right: 30px;" class="swiper-slide"><img src="../img/ninebot/lbt/5.jpg"/></div>
+                                    <div style="width: 435.333px; margin-right: 30px;" class="swiper-slide"><img src="../img/ninebot/lbt/6.jpg"/></div>
+                                    <div style="width: 435.333px; margin-right: 30px;" class="swiper-slide"><img src="../img/ninebot/lbt/7.jpg"/></div>
+                                    <div style="width: 435.333px; margin-right: 30px;" class="swiper-slide"><img src="../img/ninebot/lbt/8.jpg"/></div>
+                                    <div style="width: 435.333px; margin-right: 30px;" class="swiper-slide"><img src="../img/ninebot/lbt/9.jpg"/></div>
+                                    <div style="width: 435.333px; margin-right: 30px;" class="swiper-slide"><img src="../img/ninebot/lbt/10.jpg"/></div>
+                                    <div style="width: 435.333px; margin-right: 30px;" class="swiper-slide"><img src="../img/ninebot/lbt/11.jpg"/></div>
+                                </div>
+                            </div>
+                        </div>
+                  </div>
+            </article>
+            <!--==================================参数，详情图片======================-->
+            <div id="xq">
+                <div id="list">
+                    <ul>
+                        <li class="color">概述</li>
+                        <li>参数</li>
+                        <li>图集</li>
+                    </ul>
+                </div>
+                <div id="list1">
+                    <div id="gai" ></div>
+                    <div id="can" class="di1"></div>
+                    <div id="tu" class="di1"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<!--==================================尾部=======================-->
+<footer>
+    <ul>
+        <li id="fan1"><a class="iconfont icon-zhuye" href="javascript:;"></a></li>
+        <li class="addCar"><a href="javascript:;">立即购买</a></li>
+        <li id="car1"><a class="iconfont icon-gouwuche" href="javascript:;"></a></li>
+    </ul>
+</footer>
+<div id="go" class="di1">
+    <img src="../img/ninebot/top.png" alt=""/>
+</div>
+</body>
+    <script src="../js/zepto.min.js"></script>
+    <script src="../js/touch.js"></script>
+    <script src="../js/iscroll.js"></script>
+    <script src="../js/swiper-3.3.1.jquery.min.js"></script>
+    <script src="../js/ninebot.js"></script>
+<script>
+    function getHref(){
+        var address=decodeURI(window.location.search.substr(1));
+//        console.log((address))
+        var arr1= address.split("&");
+//        console.log((arr1))
+        var obj={};
+        $(arr1).each(function(i){
+            var arr=this.split("=");
+//            console.log((arr))
+            obj[arr[0]]=arr[1];
+        })
+        return obj;
+    }
+    var hrefObj=getHref();
+//    console.log(hrefObj)
+    var idNum=hrefObj.id;
+    $.ajax({
+        url:"../json/goods-list.json",
+        success:function(data){
+            if((typeof data)=="string"){
+                //alert(3)	//兼容云端
+                var data = JSON.parse(data);
+            }
+
+            var imgUrl="../img/img/20160729_210731_"+data.imgUrl[idNum]+".jpg";
+            var price=parseInt(data.goodsPrice[idNum]);
+            var title=data.goodsTitle[idNum];
+            var info=data.goodsInfo[idNum]
+            $("#wkf_tu img:first-child").prop("src",imgUrl);
+            $(".name p:first-child").html(title);
+            $(".price strong").html(price+"元");
+            $(".b2 p").html(info);
+            /*添加购物车*/
+            var num=1;
+            var on=true;
+            var cartNum=localStorage.cartNum?localStorage.cartNum:0;
+            var cartArr=localStorage.cart?JSON.parse(localStorage.cart):[];
+            var clickIndex=-1;
+            touch.on($(".addCar"),"tap",function(){
+                cartNum++;
+                for(var j=0;j<cartArr.length;j++){
+                    if(idNum==cartArr[j].id){
+                    	num=cartArr[j].num;
+                        num++;
+                        on=false;
+                        clickIndex=j;
+                        break;
+                    }else{
+                    	num=1;
+                        on=true;
+                    }
+                }
+                if(on){
+                    var a={
+                        "id":idNum,
+                        "imgUrl":imgUrl,
+                        "price":price,
+                        "goodsID":title,
+                        "num":num
+                    }
+                    cartArr.push(a);
+                }else{
+                    cartArr[clickIndex].num=num;
+                }
+                var cart=JSON.stringify(cartArr);
+                localStorage.cart=cart;
+                localStorage.cartNum=cartNum;
+            })
+        }
+    });
+</script>
+</html>

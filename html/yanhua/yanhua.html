@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			html,body{overflow:hidden;}
+			body,div,p{margin:0;padding:0;}
+			body{background:#000;font:12px/1.5 arial;color:#7A7A7A;}
+			a{text-decoration:none;outline:none;}
+			#tips,#copyright{position:absolute;width:100%;height:50px;text-align:center;background:#171717;border:2px solid #484848;}
+			#tips{top:0;border-width:0 0 2px;}
+			#tips a{font:14px/30px arial;color:#FFF;background:#F06;display:inline-block;margin:10px 5px 0;padding:0 15px;border-radius:15px;}
+			#tips a.active{background:#FE0000;}
+			#copyright{bottom:0;line-height:50px;border-width:2px 0 0;}
+			#copyright a{color:#FFF;background:#7A7A7A;padding:2px 5px;border-radius:10px;}
+			#copyright a:hover{background:#F90;}
+			p{position:absolute;top:55px;width:100%;text-align:center;}
+			.fire {
+				width: 3px;
+				height: 30px;
+				background: white;
+				position: absolute;
+			} 
+			.spark {
+				position: absolute;
+				width: 3px;
+				height: 3px;
+			}
+		</style>
+		<script src="tool.js"></script>
+		<script type="text/javascript">
+			var timer1=null;
+			function auto(){
+				var a=document.documentElement.clientWidth-3;
+					var b=document.documentElement.clientHeight-100;
+					
+					timer1=setInterval(function(){
+						var target={
+							L:Math.round(Math.random()*a),
+							T:Math.round(Math.random()*b)
+						}
+						console.log(target.L);
+						launch(target);
+					},2000)
+			}
+			function manual(){
+				document.onclick=function(e){
+					var e=e||event;
+					var target={
+						L:e.clientX,
+						T:e.clientY
+					}
+					launch(target);
+				}
+			}
+			
+			function launch(target){
+				var fire=document.createElement("div");
+				fire.className="fire";
+				fire.style.left=target.L+"px";
+				fire.style.top=document.documentElement.clientHeight-100+"px";
+				document.body.appendChild(fire);
+				startMove(fire,{"height":3,"top":target.T},function(){
+					document.body.removeChild(fire);
+					explode(target);
+				});
+			}
+			function explode(target){
+				var count=Math.round(Math.random()*50)+30;
+				for(var i=0;i<count;i++){
+					var oDiv=document.createElement("div");
+					var s=new Spark(oDiv,target);
+				}
+			}
+			//创建构造函数Spark
+			function Spark(star,target){
+				
+				this.star=star;
+				this.speedX=0;
+				this.speedY=0;
+				this.timer=null;
+				this.init(target);
+			}
+			//初始化
+			Spark.prototype.init=function(target){
+				var that=this;
+				this.startPos(target);
+				this.speed();
+				this.randomColor();
+				this.timer=setInterval(function(){
+					that.timeMove();
+				},30)
+			}
+			//设置随机速度
+			Spark.prototype.speed=function(){
+				this.speedX=(Math.round(Math.random()*20)+1)*(Math.random()>0.5?-1:1);
+				this.speedY=(Math.round(Math.random()*20)+1)*(Math.random()>0.5?-1:1);
+			}
+			//设置初始位置和样式
+			Spark.prototype.startPos=function(target){
+				this.star.className="spark";
+				this.star.style.left=target.L+"px";
+				this.star.style.top=target.T+"px";
+			}
+			//给小星星设置随机颜色
+			Spark.prototype.randomColor=function(){
+				this.star.style.background=randomColor();
+				document.body.appendChild(this.star);
+			}
+			//添加定时器运动
+			Spark.prototype.timeMove=function(){
+				this.star.style.left=this.star.offsetLeft+this.speedX+"px";
+				this.star.style.top=this.star.offsetTop+this.speedY++ +"px";
+				if(this.star.offsetTop>document.documentElement.clientHeight){
+					document.body.removeChild(this.star);
+					clearInterval(this.timer);
+					this.timer=null;
+				}
+			}
+			
+			window.onload=function(){
+				var oManual=document.getElementById("manual");
+				var oAuto=document.getElementById("auto");
+				var oStop=document.getElementById("stop");
+				oManual.onclick=function(e){
+					clearInterval(timer1);
+					this.timer1=null;
+					manual();
+				}
+				oAuto.onclick=function(e){
+					auto();
+					document.onclick=null;
+				}
+				oStop.onclick=function(e){
+					clearInterval(timer1);
+					this.timer1=null;
+					document.onclick=null;
+				}
+			}
+			
+		</script>
+	</head>
+<body>
+	<div id="tips">
+		<a id="manual" href="javascript:;" class="active">手动放烟花</a>
+		<a id="auto" href="javascript:;" class="">自动放烟花</a>
+		<a id="stop" href="javascript:;" class="">停止放烟花</a>
+	</div>
+	<p>由于浏览器渲染能力有限, 当浏览器为IE或选择自动放烟花时, 随机生成的烟花碎片范围自动调整至20-30</p>
+	<div id="copyright">建议使用Firefox, Chrome浏览器预览效果. 如蒙转载请注明出处 
+		<a href="http://js.fgm.cc/">Fgm.cc</a> , By — Ferris, QQ:21314130
+	</div>
+</body></html>

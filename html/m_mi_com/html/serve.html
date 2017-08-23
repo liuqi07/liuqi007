@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/serve.css"/>
+    <link rel="stylesheet" href="../fonts/iconfont.css"/>
+</head>
+<body>
+<header id="wsf-top">
+    <div class="top">
+        <a href="../index.html"><img src="../img/cart/icon_back_n.png"></a>
+        <h2>个人中心</h2>
+        <a href="search.html"><i class="iconfont icon-sousuo"></i></a>
+    </div>
+</header>
+<section class="cont-2">
+    <div class="cont-2-top">
+       <div class="fot">立即登录</div>
+        <div class="cont-lo">
+            <a href="login.html">+</a>
+        </div>
+        <div class="cont-buy">
+            <a href=""><div ><img src="../img/cart/d.png" alt=""/></div>全部订单<span></span></a>
+            <a href=""><div ><img src="../img/cart/t.png" alt=""/></div>待付款<span></span></a>
+            <a href=""><div ><img src="../img/cart/l.png" alt=""/></div>待收货<span></span></a>
+        </div>
+    </div>
+    <div>
+        <div class="cont-3 "><img src="../img/cart/you.png" alt=""/><a href="javascript:;">我的优惠</a></div>
+        <div class="cont-4 "><img src="../img/cart/f.png" alt=""/><a href="javascript:;">F码通道</a></div>
+        <div class="cont-5"><img src="../img/cart/lian.png" alt=""/><a href="javascript:;">我的服务</a></div>
+        <div class="cont-6"><img src="../img/cart/q.png" alt=""/><a href="javascript:;">设置</a></div>
+    </div>
+
+</section>
+<!--footer导航-->
+<footer id="wsf-footer">
+    <ul class="sort">
+        <li>
+            <a href="../index.html">
+                <span class="iconfont icon-shangcheng"></span>
+						<span>
+							商城
+						</span>
+            </a>
+        </li>
+        <li>
+            <a href="shop.html">
+                <span class="iconfont icon-fenlei"></span>
+						<span>
+							分类
+						</span>
+            </a>
+        </li>
+        <li>
+            <a href="cart.html">
+                <span class="iconfont icon-gouwuche" ></span>
+						<span>
+							购物车<i id="car-num"></i>
+						</span>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;">
+                <span class="iconfont icon-fuwu"></span>
+						<span>
+							服务
+						</span>
+            </a>
+        </li>
+    </ul>
+</footer>
+
+</body>
+<script src="../js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	/*购物车数量*/
+	var cartNum=localStorage.cartNum?localStorage.cartNum:0;
+	$("#car-num").html("("+cartNum+")");
+</script>
+</html>

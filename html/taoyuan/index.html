@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>白银镖车</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    ul,li,ol {
+        list-style: none;
+    }
+    a {
+        text-decoration: none;
+    }
+    .clear {
+        clear: both;
+    }
+    .bg {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        background: url(img/bg.png) center top no-repeat;
+        background-size: cover;
+    }
+    .content {
+        width: 1000px;
+        height: 1200px;
+        /*background-color: rgba(255,255,255,0.4);*/
+        margin: 0 auto;
+    }
+    .left {
+        width: 333px;
+        float: left;
+    }
+    .left .title {
+        width: 333px;
+        height: 133px;
+        margin-top: 33px;
+        background: url(img/bybc.png);
+        background-size: cover;
+    }
+    .left .box {
+        width: 300px;
+        height: 247px;
+        border-radius: 10px;
+        background-color: rgba(205, 227, 255, .8);
+        margin-top: 112px;
+        margin-bottom: 15px;
+        padding-top: 13px;
+    }
+    .left .box p {
+        width: 300px;
+        height: 30px;
+        /*line-height: 76px;*/
+        margin-top: 38px;
+        margin-left: 16px;
+        color: #333333;
+        font-size: 22px;
+    }
+    .left .box p.last {
+        margin-left: 80px;
+    }
+    .box p.last input {
+        border-bottom: 2px solid #333;
+    }
+    .box p span {
+        float: left;
+    }
+    .box p input {
+        width: 80px;
+        height: 29px;
+        float: left;
+        border: none;
+        line-height: 76px;
+        text-align: center;
+        color: #666;
+        font-size: 20px;
+        margin: 0 10px;
+        background-color: rgba(205, 227, 255, .8);
+        outline: none;
+    }
+    .left .button button{
+        width: 114px;
+        height: 30px;
+        border: 2px solid #fd7d20;
+        border-radius: 10px;
+        margin: 0 19px;
+        background: linear-gradient(top , rgb(255, 245, 137) 1% , rgb(253, 211, 39) 100%);
+        background: -o-linear-gradient(top , rgb(255, 245, 137) 1% , rgb(253, 211, 39) 100%);
+        background: -ms-linear-gradient(top , rgb(255, 245, 137) 1% , rgb(253, 211, 39) 100%);
+        background: -moz-linear-gradient(top , rgb(255, 245, 137) 1% , rgb(253, 211, 39) 100%);
+        background: -webkit-linear-gradient(top , rgb(255, 245, 137) 1% , rgb(253, 211, 39) 100%);
+        color: #666666;
+        outline: none;
+        cursor: pointer;
+    }
+    .right {
+        float: left;
+        width: 604px;
+        height: 800px;
+        background-color: rgba(205, 227, 255, .6);
+        margin-left: 60px;
+        margin-top: 100px;
+        position: relative;
+    }
+    .table{
+        background-color: rgba(205, 227, 255, .6);
+        border-collapse:collapse;
+        border: none;
+    }
+    .table th,.table td{
+        width: 111px;
+        height: 30px;
+        border: none;
+        border-left: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 100;
+    }
+    .table .first {
+        width: 155px;
+        border-left: none;
+    }
+    .origin {
+        color: #ff6600;
+    }
+    .blue {
+        color: #3399ff;
+    }
+    .right .tip {
+        position: absolute;
+        left: 20px;
+        bottom: 14px;
+        color: #474646;
+        font-size: 22px;
+    }
+    .tip span {
+        color: #663300;
+    }
+</style>
+<body>
+    <div class="bg">
+        <div class="content">
+            <div class="left">
+                <div class="title"></div>
+                <div class="box">
+                    <p><input type="text" id="m" placeholder="--"><span>月</span><input type="text" id="d" placeholder="--"><span>日</span></p>
+                    <p><input type="text" id="h" placeholder="--"><span>时</span><input type="text" id="min" placeholder="--"><span>分</span></p>
+                    <p class="last"><span>第</span><input type="text" id="count"><span>次</span></p>
+                </div>
+                <div class="button">
+                    <button id="btn1">生成时刻表</button>
+                    <button id="btn2">生成图片</button>
+                </div>
+            </div>
+            <div class="right">
+                <table class="table" id="table">
+                    <tr><th class="first"></th><th>月</th><th>日</th><th>时</th><th>分</th></tr>
+                    <tr><td class="first origin">第1次</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td class="first origin">第2次</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td class="first origin">第3次</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td class="first blue">第1次</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td class="first blue">第2次</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td class="first blue">第3次</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td class="first origin">第1次</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td class="first origin">第2次</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td class="first origin">第3次</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td class="first blue">第1次</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td class="first blue">第2次</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td class="first blue">第3次</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td class="first origin">第1次</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td class="first origin">第2次</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td class="first origin">第3次</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td class="first blue">第1次</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td class="first blue">第2次</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td class="first blue">第3次</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td class="first origin">第1次</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td class="first origin">第2次</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td class="first origin">第3次</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td class="first blue">第1次</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td class="first blue">第2次</td><td></td><td></td><td></td><td></td></tr>
+                </table>
+                <div class="tip">注：如有疑问，请游戏联系&nbsp;&nbsp;<span>百里紫衣丷</span></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</body>
+
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<!-- <script src="html2canvas.js"></script>
+<script src="jsPdf.debug.js"></script> -->
+<script>
+
+var m = {}, d = {}, h = {}, min = {};
+var count = 0;
+// 判断当前年份是否是闰年
+var year = Number(new Date().getFullYear());
+function isLeapYear(year) {
+    return (year % 4 === 0) && (year % 100 !== 0 || year % 400 === 0);
+}
+
+function countDown(i, hour, minutes){
+    // 如果分钟数+38大于了60
+    if((min['min'+i] + minutes)>=60){
+        // 分钟数+minutes再减去60分，并向小时位进一
+        min['min'+(i+1)] = min['min'+i] + minutes -60;
+        // 如果小时位+10大于24
+        if((h['h'+i] + hour)>=24){
+            h['h'+(i+1)] = h['h'+i] + hour + 1 - 24;
+            // 31天的月份
+            if((d['d'+i]+1)>31 && (m['m'+i]==1 || m['m'+i]==3 || m['m'+i]==5 || m['m'+i]==7 || m['m'+i]==8 || m['m'+i]==10 || m['m'+i]==12)){
+                d['d'+(i+1)] = 1;
+                m['m'+(i+1)] = m['m'+i] + 1;
+            }
+            // 2月
+            else if((d['d'+i]+1)>29 && m['m'+i]==2 && isLeapYear(year) || (d['d'+i]+1)>28 && m['m'+i]==2 && !isLeapYear(year)){
+                d['d'+(i+1)] = 1;
+                m['m'+(i+1)] = m['m'+i] + 1;
+            }
+            // 30天的月份
+            else if((d['d'+i]+1)>30 && (m['m'+i]==4 || m['m'+i]==6 || m['m'+i]==9 || m['m'+i]==11)){
+                d['d'+(i+1)] = 1;
+                m['m'+(i+1)] = m['m'+i] + 1;
+            }
+            // 剩下的是月份不进位的天
+            else {
+                d['d'+(i+1)] = d['d'+i] + 1;
+                m['m'+(i+1)] = m['m'+i];
+            }
+        }else {
+            h['h'+(i+1)] = h['h'+i] + hour + 1;
+            d['d'+(i+1)] = d['d'+i];
+            m['m'+(i+1)] = m['m'+i];
+        }
+
+    }else{
+        min['min'+(i+1)] = min['min'+i] + minutes;
+        if((h['h'+i] + hour)>=24){
+            h['h'+(i+1)] = h['h'+i] + hour - 24;
+            // 31天的月份
+            if((d['d'+i]+1)>31 && (m['m'+i]==1 || m['m'+i]==3 || m['m'+i]==5 || m['m'+i]==7 || m['m'+i]==8 || m['m'+i]==10 || m['m'+i]==12)){
+                d['d'+(i+1)] = 1;
+                m['m'+(i+1)] = m['m'+i] + 1;
+            }
+            // 2月
+            else if((d['d'+i]+1)>29 && m['m'+i]==2 && isLeapYear(year) || (d['d'+i]+1)>28 && m['m'+i]==2 && !isLeapYear(year)){
+                d['d'+(i+1)] = 1;
+                m['m'+(i+1)] = m['m'+i] + 1;
+            }
+            // 30天的月份
+            else if((d['d'+i]+1)>30 && (m['m'+i]==4 || m['m'+i]==6 || m['m'+i]==9 || m['m'+i]==11)){
+                d['d'+(i+1)] = 1;
+                m['m'+(i+1)] = m['m'+i] + 1;
+            }
+            // 剩下的是月份不进位的天
+            else {
+                d['d'+(i+1)] = d['d'+i] + 1;
+                m['m'+(i+1)] = m['m'+i];
+            }
+        }else {
+            h['h'+(i+1)] = h['h'+i] + hour;
+            d['d'+(i+1)] = d['d'+i];
+            m['m'+(i+1)] = m['m'+i];
+        }
+    }
+}
+
+$('#btn1').on('click', function(){
+
+    if(!$('#m').val() && !$('#d').val() && !$('#h').val() && !$('#min').val() && !$('#count').val()){
+        alert('啥都不告诉我，我咋给你算！');
+        return;
+    }
+    else if(!$('#m').val() || !$('#d').val() || !$('#h').val() || !$('#min').val() || !$('#count').val()){
+        alert('别偷懒，少一个都不行！');
+        return;
+    }
+
+
+    count = Number($('#count').val()); // 第几次白银镖车
+    m['m'+count] = Number($('#m').val());
+    d['d'+count] = Number($('#d').val());
+    h['h'+count] = Number($('#h').val());
+    min['min'+count] = Number($('#min').val());
+
+    if(isNaN(count) || isNaN(m['m'+count]) || isNaN(d['d'+count]) || isNaN(h['h'+count]) || isNaN(min['min'+count])){
+        alert('你就瞎输吧，别以为我不知道！');
+        return;
+    }
+
+    // $('.box').removeClass('dn').addClass('db');
+    // 镖与镖之间间隔10小时20分轮与轮之间间隔17小时38分钟
+
+    for(var i=count; i<=100; i++){
+        // 每轮的第三次 (i+1)后就是下一轮第一次 +17:38
+        if(i%3 === 0){
+            // 如果分钟数+38大于了60
+            countDown(i, 17, 38);
+        }else if(i%3!==0){
+            // 如果分钟数+20大于了60
+            countDown(i, 10, 20);
+        }
+    }
+    // console.log(m);
+    // console.log(d);
+    // console.log(h);
+    // console.log(min);
+    var str = '<tr>' +
+                    '<th></th>' +
+                    '<th>月</th>' +
+                    '<th>日</th>' +
+                    '<th>时</th>' +
+                    '<th>分</th>' +
+                '</tr>';
+    for(var i=count; i<=23; i++){
+
+        console.log(m['m'+i]+'-'+d['d'+i]+' '+h['h'+i]+':'+min['min'+i]);
+        str += '<tr class="'+ (Math.ceil(i/3)%2===1?'origin':'blue') +'">' +
+                    '<td class="first">第'+ (i%3===0?3:i%3) +'次</td>' +
+                    '<td>'+ m['m'+i] +'</td>' +
+                    '<td>'+ d['d'+i] +'</td>' +
+                    '<td>'+ h['h'+i] +'</td>' +
+                    '<td>'+ min['min'+i] +'</td>' +
+                '</tr>';
+    }
+    $('.table').html(str);
+});
+$('#btn2').click(function(){
+    alert('此功能待开发...');
+});
+
+// var downPdf = document.getElementById("btn2");
+
+// downPdf.onclick = function() {
+//     var table = document.getElementById('table');
+//     table.style.backgroundColor = 'rgba(205, 227, 255, .6)';
+
+//     html2canvas(table, {
+//       onrendered:function(canvas) {
+
+//           var contentWidth = canvas.width;
+//           var contentHeight = canvas.height;
+
+//           //一页pdf显示html页面生成的canvas高度;
+//           var pageHeight = contentWidth / 592.28 * 841.89;
+//           //未生成pdf的html页面高度
+//           var leftHeight = contentHeight;
+//           //pdf页面偏移
+//           var position = 0;
+//           //a4纸的尺寸[595.28,841.89]，html页面生成的canvas在pdf中图片的宽高
+//           var imgWidth = 595.28;
+//           var imgHeight = 592.28/contentWidth * contentHeight;
+
+//           var pageData = canvas.toDataURL('image/jpeg', 2.0);
+
+//           var pdf = new jsPDF('', 'pt', 'a4');
+
+//           //有两个高度需要区分，一个是html页面的实际高度，和生成pdf的页面高度(841.89)
+//           //当内容未超过pdf一页显示的范围，无需分页
+//           if (leftHeight < pageHeight) {
+//               pdf.addImage(pageData, 'JPEG', 0, 0, imgWidth, imgHeight );
+//           } else {
+//               while(leftHeight > 0) {
+//                   pdf.addImage(pageData, 'JPEG', 0, position, imgWidth, imgHeight);
+//                   leftHeight -= pageHeight;
+//                   position -= 841.89;
+//                   //避免添加空白页
+//                   if(leftHeight > 0) {
+//                       pdf.addPage();
+//                   }
+//               }
+//           }
+
+//           pdf.save('白银时刻表.pdf');
+//       }
+//   });
+//     table.style.backgroundColor = 'rgba(205, 227, 255, .6)';
+// };
+
+
+</script>
+</html>
+</html>

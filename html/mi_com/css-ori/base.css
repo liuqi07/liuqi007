@@ -1,0 +1,148 @@
+
+html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img,span,i,em,b,div,a,input{margin:0;padding:0;}
+body{font:12px/20px "微软雅黑";}
+li,ul,ol{list-style:none;}
+a{text-decoration:none;}
+img{border:none;}
+.left{float:left;}
+.right{float:right;}
+.clear{clear:both;height:0;overflow:hidden;}
+body,html{height:100%;background:#fff;}
+
+/*------------common公共的样式-----------------*/
+#top,#nav,#footer-service,#footer-links,#site-info,#slogan{width:1226px;margin:0 auto}
+.site-info-bj,.slogan-bj{width:100%;height:auto;background:#fafafa;}
+
+
+/*-----top--------*/
+.top-bj{width:100%;height:40px;background:#333;}
+#top{height:40px;background:#333}
+#top a{font-size: 12px;color: #b0b0b0;line-height: 40px;padding:10px;}
+#top a:hover{color:#fff;}
+#top span{color:#b0b0b0}
+#top .left{width:800px;}
+#top .right a{padding:0 10px;float:left;height:40px;}
+#top .right .info{display:none;padding:0;float:left;}
+#top .right .shop{width:120px;height:40px;display:block;float:right;background:#424242;text-align: center;
+	padding:0;line-height: 40px;}
+	
+/*--------nav-----------*/
+.nav-bj{width:100%;height:100px;background:#fff;}
+#nav{height:100px;position:relative;}
+#nav .logo{width:50px;height:50px;margin:20px 10px 0 0;background:#ff6700;float:left;}
+#nav .logo2{width:162px;height:85px;float:left;margin-top:15px;}
+#nav .list{width:530px;float:left;}
+#nav .list2{width:116px;float:left;}
+#nav .list li{list-style:none;padding:0 13px;float:left;}
+#nav .list li a{display: block;line-height: 100px;font-size:16px;color:#333;}
+#nav .list2 li{list-style:none;padding:0 13px;float:left;}
+#nav .list2 li a{display: block;line-height: 100px;font-size:16px;color:#333;}
+#nav .search{width:300px;height:50px;padding:25px 0;float:right;}
+#nav .search .txt{width:223px;height:48px;border:0;border:1px solid #e0e0e0;border-right:0;float:left;
+		padding-left:20px;font-size:20px;outline:none;}
+#nav .search .sch{width:48px;height:50px;border:0;border:1px solid #e0e0e0;float:left;outline: none;
+		background:url(../img/nav/search.jpg) center no-repeat;cursor:pointer;}
+#nav .search .sch:hover{background:url(../img/nav/search2.jpg) center no-repeat}
+
+/*---------navMenu下拉菜单-----------*/		
+#navMenu{width:100%;height:230px;background:#fff;position:absolute;left:0;top:100px;z-index: 10;display: none;}
+#navMenu ul{width:100%;height:230px;position: absolute;background:#fff;}
+#navMenu ul li{width:205px;height:195px;float:left;padding-top:35px;}
+#navMenu ul li a{display: block;margin:0 0 10px 22px;}
+#navMenu ul li p{height:22px;line-height: 22px;font-size: 12px;color:#333333;text-align: center;}
+#navMenu ul li span{display:block;height:22px;line-height: 22px;font-size:12px;color:orange;text-align: center;}
+
+/*===========================================================================*/
+
+/*-----------footer-service-----------------*/
+#footer-service{height:80px;border-bottom:2px solid #ccc;}
+#footer-service a{float:left;width:242px;height:80px;line-height:80px;font-size:18px;text-align: center;
+		color:#616161;text-indent:30px;}
+#footer-service a:hover{color:orange;}
+#footer-service a span{margin-left:60px;}
+
+/*-----------footer-links-----------------*/
+#footer-links{height:120px;padding:40px 0;}
+#footer-links .footer-left{width:977px;}
+#footer-links .footer-left ul{width:90px;float:left;margin-right:70px;}
+#footer-links .footer-left ul li{margin-top:8px;}
+#footer-links .footer-left ul li a{font-size: 12px;color:#757575;}
+#footer-links .footer-left ul li a:hover{color:orange;}
+#footer-links .footer-left ul li:first-child{font-size: 14px;color:#424242;margin-bottom:16px;}
+#footer-links .footer-right{width:246px;height:120px;border-left:2px solid #ccc;}
+#footer-links .footer-right span{display:block;width:246px;height:22px;text-align:center;font-size: 22px;
+		line-height: 1;color:#ff6700;margin-bottom:5px;}
+#footer-links .footer-right p{width:246px;height:36px;font-size:14px;color:#616161;text-align: center;
+		line-height:1.5;margin-bottom:26px;}		
+#footer-links .footer-right a{display: block;width:118px;height:28px;border:1px solid #ff6700;color:#ff6700;
+		background:#fff;font-size:12px;line-height:28px;text-indent:26px;margin-left:64px;}
+#footer-links .footer-right a:hover{background:#ff6700;color:#fff;}
+
+/*----------#site-info-------------------*/
+#site-info{height:57px;padding:30px 0;}
+#site-info .logo{width:57px;height:57px;background:#ff6709;margin-right:10px;float:left;}
+#site-info .logo img{margin:3px 0 0 3px;}
+#site-info .info-text{750px;height:57px;float:left;}
+#site-info .info-text p:first-child a{color:#757575;line-height: 18px;}
+#site-info .info-text p:first-child a:hover{color:orange;}
+#site-info .info-text p:last-child{font-size:12px;color:#b0b0b0;}
+#site-info .info-text p:last-child a{font-size:12px;color:#b0b0b0;}
+#site-info .info-text p:last-child a:hover{color:orange;}
+
+/*-------------#slogan-------------------*/
+#slogan{height:50px;padding-top:30px;}
+#slogan p{background:url(../img/slogan2016.png) no-repeat;text-indent:-9999px;margin-left: 500px;}
+
+
+/*=============================================*/
+
+/*----------------mask------------------------*/
+#mask{width:100%;height:100%;background:rgba(0,0,0,0.5);position:fixed;left:0;top:0;z-index:15;display:none;}
+
+
+.close{width:40px;height:40px;position:absolute;right:0;top:0;display:block;background:url(../img/login/close3.jpg) no-repeat;
+		border-radius:0 10px 0 0;cursor: pointer;background-size:cover;}
+
+/*----------------login------------------------*/
+#login{width:600px;height:550px;background:#fff;padding-top:30px;position:fixed;
+		z-index:999;left:30%;top:15%;display:none;border-radius: 10px;}
+#login .logo{width:57px;height:57px;background:orange;margin:0 auto;}
+#login .logo img{margin:4px 0 0 3px}
+#login h1{height:70px;font-size:28px;line-height: 80px;text-align: center;font-weight: 100;}
+#login .loginBox{width:360px;height:auto;margin:0 auto;}
+#login .loginBox input{width:338px;height:48px;border:0;border:1px solid #ccc;margin:10px 0;
+		padding-left:20px;font-size:16px;border-radius: 7px;outline: none;}
+#login .loginBox span{display:none;margin:0 10px;height:16px;color:#f00;width:300px;}
+#login .loginBox a{display: block;width:360px;height:50px;background:orange;margin-top:30px;text-align: center;
+		line-height: 50px;font-size: 16px;color:#fff;}
+#login fieldset{width:360px;margin:20px auto 15px;text-align: center;border:0;border-top:1px solid #ccc;
+		color:#ccc;display:block;}
+#login .others{width:170px;height:50px;margin:0 auto;}
+#login .others a{float:left;width:56px;height:50px;background: url(../img/login/weibo.jpg) no-repeat center;
+		text-indent: -9999px;}
+#login .others a:first-child{background: url(../img/login/qq.jpg) no-repeat center;}
+#login .others a:last-child{background: url(../img/login/zfb.jpg) no-repeat center;}
+#login p{width:180px;height:20px;margin:10px auto;color:#aaa;text-align: center;}
+#login p a{font-size: 14px;line-height: 20px;color:#aaa;}
+#login p span{margin:0 5px;}
+
+/*----------------register------------------------*/
+#register{width:600px;height:550px;background:#fff;padding-top:30px;display:none;
+		position:fixed;z-index:999;left:30%;top:15%;border-radius: 10px;}
+#register .logo{width:57px;height:57px;background:orange;margin:0 auto;}
+#register .logo img{margin:4px 0 0 3px}
+#register h1{height:60px;font-size:28px;line-height: 80px;text-align: center;font-weight: 100;}
+
+#register .registerBox{width:330px;height:auto;margin:0 auto;position:relative;}
+#register .registerBox input{width:308px;height:42px;border:0;border:1px solid #D9D7D5;margin:10px 0;
+		padding-left:20px;font-size:16px;border-radius: 7px;outline: none;}
+#register .registerBox span{display:none;margin:0 10px;height:16px;color:#f00;width:300px;}
+#register .registerBox div{width:330px;height:44px;margin:10px 0;}		
+#register .registerBox div .code{width:170px;float:left;margin:0;}
+#register .registerBox div a{display:block;width:126px;height:42px;background:#ccc;color:#fff;border:1px solid #fff;
+		font-size:30px;text-align:center;line-height:42px;border-radius:7px;float:left;margin-left:10px;cursor:pointer;}
+#register .registerBox .zc{display: block;width:330px;height:42px;background:orange;text-align: center;
+		line-height: 42px;font-size: 16px;color:#fff;margin:25px 0 8px;}
+#register .registerBox p{left:0;top:310px;}
+#register .registerBox p strong:hover{cursor: pointer;}
+

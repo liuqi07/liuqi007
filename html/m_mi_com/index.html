@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/animate.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="fonts/iconfont.css"/>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="scroller">
+				<!--顶部搜索框-->
+					<header id="b-top">
+						<div>
+							<!--链接到搜索页面-->
+							<a href="html/search.html">
+								<span class="s-img iconfont icon-sousuo"></span>
+								<span>搜索商品名称</span>
+							</a>
+						</div>
+						<div class="no-borTop"></div>
+					</header>
+				<!--banner轮播图-->
+					<section id="b-banner">
+						<div class="swiper-container">
+						    <div class="swiper-wrapper">
+						        <div class="swiper-slide"><img src="img/img/20160729_210731_000.jpg"/></div>
+						        <div class="swiper-slide"><img src="img/img/20160729_210731_001.jpg"/></div>
+						        <div class="swiper-slide"><img src="img/img/20160729_210731_002.jpg"/></div>
+						        <div class="swiper-slide"><img src="img/img/20160729_210731_003.jpg"/></div>
+						        <div class="swiper-slide"><img src="img/img/20160729_210731_004.jpg"/></div>
+						    </div>
+						    <!--分页器 -->
+						    <div class="swiper-pagination"></div>
+						</div>
+					</section>
+					
+				<!--content商品列表-->
+					<section id="b-content">
+						<!--图片列表分类-->
+							<ul class="list-img">
+								<li><a href=""><img src="img/img/20160729_210731_005.jpg" alt="" /></a></li>
+								<li><a href=""><img src="img/img/20160729_210731_006.jpg" alt="" /></a></li>
+								<li><a href=""><img src="img/img/20160729_210731_007.jpg" alt="" /></a></li>
+								<li><a href=""><img src="img/img/20160729_210731_008.jpg" alt="" /></a></li>
+								<li><a href=""><img src="img/img/20160729_210731_009.jpg" alt="" /></a></li>
+								<li><a href=""><img src="img/img/20160729_210731_010.jpg" alt="" /></a></li>
+							</ul>
+							<!--红米note3——banner图-->
+							<div class="red-not3">
+								<a href="">
+									<img src="img/img/20160729_210731_011.jpg"/>
+								</a>
+							</div>
+						<!--商品详情列表57行-->
+							<ul class="goods-list">
+								<!--<li>
+									<a href="">
+										<aside>
+											<img src="img/img/20160729_210731_012.jpg" alt="" />
+										</aside>
+										<article>
+											<h2>红米Pro</h2>
+											<p>硬件级实时背景虚化 / Helio X20 十核旗舰处理 / 5.5” OLED 超鲜艳屏幕 / 拉丝全金属机身</p>
+											<span>1499元 起</span>
+										</article>
+									</a>-->
+									<!--购物车-->
+								<!--	<div class="addCar iconfont icon-gouwuche"></div>
+								</li>-->
+							</ul>
+					</section>
+					<div id="pullUp">
+						<span class="pullUpLabel">正在加载...</span>
+					</div>
+					<section id="footer-banner">
+						<img src="img/img/20160729_210731_069.jpg"/>
+					</section>
+			</div>
+		</div>
+		
+		<!--footer导航-->
+		<footer id="b-footer">
+			<ul class="sort">
+				<li>
+					<a href="">
+						<span class="iconfont icon-shangcheng"></span>
+						<span>
+							商城
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="html/shop.html">
+						<span class="iconfont icon-fenlei"></span>
+						<span>
+							分类
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="html/cart.html">
+						<span class="iconfont icon-gouwuche" ></span>
+						<span class="animated">
+							购物车<i id="car-num"></i>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="html/serve.html">
+						<span class="iconfont icon-fuwu"></span>
+						<span>
+							服务
+						</span>
+					</a>
+				</li>
+			</ul>
+		</footer>
+	</body>
+	<script src="js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/touch.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/iscroll.js" type="text/javascript" charset="utf-8"></script>
+	<!--利用swiper做轮播图-->
+	<script src="js/swiper-3.3.1.jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script>        
+	  	var mySwiper = new Swiper ('.swiper-container', {
+		    loop: true,
+		    pagination: '.swiper-pagination',
+		    autoplay : 3000,
+			autoplayDisableOnInteraction : false,
+		})        
+ 	</script>
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+</html>

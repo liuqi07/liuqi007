@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+    .game {
+        width: 700px;
+        margin:50px 200px;
+    }
+    .input {
+        margin-bottom: 20px;
+    }
+    .game input {
+        width: 50px;
+    }
+    .dn {
+        display: none;
+    }
+    .db {
+        display: block;
+    }
+    .blue {
+        background: #00B0F0;
+    }
+    .tip {
+        position: fixed;
+        width: 35px;
+        height: 400px;
+        font-size: 35px;
+        left: 60px;
+        top: 80px;
+        text-align: center;
+    }
+    .tip span {
+        color: #00f;
+    }
+</style>
+<body style="position: relative;">
+<div class="game">
+    <div class="input">
+        <span>请输入：</span>
+        <input type="text" value="" id="m">月
+        <input type="text" value="" id="d">日
+        <input type="text" value="" id="h">时
+        <input type="text" value="" id="min">分&nbsp;
+        第<input type="text" value="" id="count">次
+        <button id="btn">生成白银镖车时刻表</button>
+        <button id="btn-html2canvas" class="btn">生成PDF</button>
+    </div>
+    <div class="box dn" id="content">
+        <table border="1" width="500" align="left" cellpadding="2" cellspacing="0">
+            <tr align="center" class="header">
+                <th></th>
+                <th>月</th>
+                <th>日</th>
+                <th>时</th>
+                <th>分</th>
+            </tr>
+            <tr align="center" class="content">
+                <td>第一次</td>
+                <td>8</td>
+                <td>1</td>
+                <td>1</td>
+                <td>30</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="tip">
+    如有任何疑问 ，请游戏联系 <span>百里紫衣丷</span> ^_^
+</div>
+
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="jspdf.min.js"></script>
+<script src="html2canvas.min.js"></script>
+<script>
+
+var m = {}, d = {}, h = {}, min = {};
+var count = 0;
+// 判断当前年份是否是闰年
+var year = Number(new Date().getFullYear());
+function isLeapYear(year) {
+    return (year % 4 === 0) && (year % 100 !== 0 || year % 400 === 0);
+}
+
+function countDown(i, hour, minutes){
+    // 如果分钟数+38大于了60
+    if((min['min'+i] + minutes)>=60){
+        // 分钟数+minutes再减去60分，并向小时位进一
+        min['min'+(i+1)] = min['min'+i] + minutes -60;
+        // 如果小时位+10大于24
+        if((h['h'+i] + hour)>=24){
+            h['h'+(i+1)] = h['h'+i] + hour + 1 - 24;
+            // 31天的月份
+            if((d['d'+i]+1)>31 && (m['m'+i]==1 || m['m'+i]==3 || m['m'+i]==5 || m['m'+i]==7 || m['m'+i]==8 || m['m'+i]==10 || m['m'+i]==12)){
+                d['d'+(i+1)] = 1;
+                m['m'+(i+1)] = m['m'+i] + 1;
+            }
+            // 2月
+            else if((d['d'+i]+1)>29 && m['m'+i]==2 && isLeapYear(year) || (d['d'+i]+1)>28 && m['m'+i]==2 && !isLeapYear(year)){
+                d['d'+(i+1)] = 1;
+                m['m'+(i+1)] = m['m'+i] + 1;
+            }
+            // 30天的月份
+            else if((d['d'+i]+1)>30 && (m['m'+i]==4 || m['m'+i]==6 || m['m'+i]==9 || m['m'+i]==11)){
+                d['d'+(i+1)] = 1;
+                m['m'+(i+1)] = m['m'+i] + 1;
+            }
+            // 剩下的是月份不进位的天
+            else {
+                d['d'+(i+1)] = d['d'+i] + 1;
+                m['m'+(i+1)] = m['m'+i];
+            }
+        }else {
+            h['h'+(i+1)] = h['h'+i] + hour + 1;
+            d['d'+(i+1)] = d['d'+i];
+            m['m'+(i+1)] = m['m'+i];
+        }
+
+    }else{
+        min['min'+(i+1)] = min['min'+i] + minutes;
+        if((h['h'+i] + hour)>=24){
+            h['h'+(i+1)] = h['h'+i] + hour - 24;
+            // 31天的月份
+            if((d['d'+i]+1)>31 && (m['m'+i]==1 || m['m'+i]==3 || m['m'+i]==5 || m['m'+i]==7 || m['m'+i]==8 || m['m'+i]==10 || m['m'+i]==12)){
+                d['d'+(i+1)] = 1;
+                m['m'+(i+1)] = m['m'+i] + 1;
+            }
+            // 2月
+            else if((d['d'+i]+1)>29 && m['m'+i]==2 && isLeapYear(year) || (d['d'+i]+1)>28 && m['m'+i]==2 && !isLeapYear(year)){
+                d['d'+(i+1)] = 1;
+                m['m'+(i+1)] = m['m'+i] + 1;
+            }
+            // 30天的月份
+            else if((d['d'+i]+1)>30 && (m['m'+i]==4 || m['m'+i]==6 || m['m'+i]==9 || m['m'+i]==11)){
+                d['d'+(i+1)] = 1;
+                m['m'+(i+1)] = m['m'+i] + 1;
+            }
+            // 剩下的是月份不进位的天
+            else {
+                d['d'+(i+1)] = d['d'+i] + 1;
+                m['m'+(i+1)] = m['m'+i];
+            }
+        }else {
+            h['h'+(i+1)] = h['h'+i] + hour;
+            d['d'+(i+1)] = d['d'+i];
+            m['m'+(i+1)] = m['m'+i];
+        }
+    }
+}
+
+$('#btn').on('click', function(){
+
+    if(!$('#m').val() && !$('#d').val() && !$('#h').val() && !$('#min').val() && !$('#count').val()){
+        alert('啥都不告诉我，我咋给你算！');
+        return;
+    }
+    else if(!$('#m').val() || !$('#d').val() || !$('#h').val() || !$('#min').val() || !$('#count').val()){
+        alert('别偷懒，少一个都不行！');
+        return;
+    }
+
+
+    count = Number($('#count').val()); // 第几次白银镖车
+    m['m'+count] = Number($('#m').val());
+    d['d'+count] = Number($('#d').val());
+    h['h'+count] = Number($('#h').val());
+    min['min'+count] = Number($('#min').val());
+
+    if(isNaN(count) || isNaN(m['m'+count]) || isNaN(d['d'+count]) || isNaN(h['h'+count]) || isNaN(min['min'+count])){
+        alert('你就瞎输吧，别以为我不知道！');
+        return;
+    }
+
+    $('.box').removeClass('dn').addClass('db');
+    // 镖与镖之间间隔10小时20分轮与轮之间间隔17小时38分钟
+
+    for(var i=count; i<=100; i++){
+        // 每轮的第三次 (i+1)后就是下一轮第一次 +17:38
+        if(i%3 === 0){
+            // 如果分钟数+38大于了60
+            countDown(i, 17, 38);
+        }else if(i%3!==0){
+            // 如果分钟数+20大于了60
+            countDown(i, 10, 20);
+        }
+    }
+    // console.log(m);
+    // console.log(d);
+    // console.log(h);
+    // console.log(min);
+    var str = '<tr align="center">' +
+                    '<th></th>' +
+                    '<th>月</th>' +
+                    '<th>日</th>' +
+                    '<th>时</th>' +
+                    '<th>分</th>' +
+                '</tr>';
+    for(var i=count; i<=30; i++){
+
+        console.log(m['m'+i]+'-'+d['d'+i]+' '+h['h'+i]+':'+min['min'+i]);
+        str += '<tr align="center" class="'+ (i%3==1?'blue':'') +'">' +
+                    '<td>第'+ (i%3===0?3:i%3) +'次</td>' +
+                    '<td>'+ m['m'+i] +'</td>' +
+                    '<td>'+ d['d'+i] +'</td>' +
+                    '<td>'+ h['h'+i] +'</td>' +
+                    '<td>'+ min['min'+i] +'</td>' +
+                '</tr>';
+    }
+    $('.box table').html(str);
+});
+
+
+</script>
+</html>

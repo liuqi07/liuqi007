@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>小米网</title>
+		<link rel="shortcut icon" href=" img/favicon.ico" />
+		<link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" href="css/index.css"/>
+		<script type="text/javascript" src="js/jquery-1.12.4.js" ></script>
+		<script type="text/javascript" src="js/index.js" ></script>
+		<script type="text/javascript">
+			//作用是让全局ajax请求数据 异步变同步，在用load加载页面的时候，不会出现异步的问题；
+			$.ajaxSetup({
+				async:false
+			});
+		</script>
+	</head>
+	<body>
+		<!-- header(load) --------------------------------------->
+		<div id="header"></div>
+		<script type="text/javascript">
+			$("#header").load("header.html");
+		</script>
+		<!-- banner ---------------------------------------------->
+		<div class="banner-bj">
+			<div id = "banner">
+				<!--轮播图-->
+				<ul class = "banner">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				<!--轮播图里的ul按钮-->
+				<ul class = "sel">
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+					<li>5</li>
+				</ul>
+				<!--轮播图的左右按钮-->
+				<div class = "btnLeft"></div>
+				<div class = "btnRight"></div>
+				<!-- 左侧的tab页 -->
+				<ul class = "list">
+					<!--json获取生成-->
+					<!--<li>手机 平板 电话卡<span>&gt;</span></li>
+					<li>电视 盒子<span>></span></li>
+					<li>路由器 智能硬件<span>></span></li>
+					<li>移动电源 插线板<span>></span></li>
+					<li>耳机 音响<span>></span></li>
+					<li>电池 存储卡<span>></span></li>
+					<li>保护套 后盖<span>></span></li>
+					<li>贴膜 其他配件<span>></span></li>
+					<li>米兔 服装<span>></span></li>
+					<li>箱包 其他周边<span>></span></li>-->
+				</ul>
+				<!-- tab页效果 -->
+				<div id="tab">
+					<!--<div class="tab">
+						<ul>
+							<li><a href="javascript:;"><img src = "img/tab/2-tv(1).jpg" /><span>小米电视 43英寸</span><a/></li>
+							<li><a href="javascript:;"><img src = "img/tab/2-tv(2).jpg" /><span>小米电视 43英寸</span><a/></li>
+							<li><a href="javascript:;"><img src = "img/tab/2-tv(3).jpg" /><span>小米电视 43英寸</span><a/></li>
+							<li><a href="javascript:;"><img src = "img/tab/2-tv(4).jpg" /><span>小米电视 43英寸</span><a/></li>
+							<li><a href="javascript:;"><img src = "img/tab/2-tv(5).jpg" /><span>小米电视 43英寸</span><a/></li>
+							<li><a href="javascript:;"><img src = "img/tab/2-tv(6).jpg" /><span>小米电视 43英寸</span><a/></li>
+						</ul>
+					</div>-->
+				</div>
+			</div>
+		</div>
+		<!--main1----------------------------------------------->
+		<div class="main1-bj">
+			<div id = "main1">
+				<div class="m1-Left">
+					<ul>
+						<li><img src="img/m1/mi_03.jpg"><p>电信专场</p></li>
+						<li><img src="img/m1/mi_05.jpg"><p>企业团购</p></li>
+						<li><img src="img/m1/mi_07.jpg"><p>官翻产品</p></li>
+						<li><img src="img/m1/mi_12.jpg"><p>小米移动</p></li>
+						<li><img src="img/m1/mi_13.jpg"><p>以旧换新</p></li>
+						<li><img src="img/m1/mi_14.jpg"><p>花费充值</p></li>
+					</ul>
+				</div>
+				<ul class="m1-right">
+					<li><img src="img/m1/m1 (1).jpg" /></li>
+					<li><img src="img/m1/m1 (2).jpg" /></li>
+					<li><img src="img/m1/m1 (3).jpg" /></li>
+				</ul>
+			</div>
+		</div>
+		<!--====================================================================-->
+		<!-- main2 --------------------------------------------->
+		<div id="main2">
+			<div class="title">
+				<h2>小米明星商品</h2>
+				<div class="btn">
+					<div></div>
+					<div></div>
+				</div>
+			</div>
+			<div class="show">
+				<ul class = "list common">
+					<li class = "margin0"><img src="img/m2/m2 (2).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span></li>
+					<li><img src="img/m2/m2 (3).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span></li>
+					<li><img src="img/m2/m2 (4).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span></li>
+					<li><img src="img/m2/m2 (5).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span></li>
+					<li><img src="img/m2/m2 (6).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span></li>
+					<li class = "margin0"><img src="img/m2/m2 (1).png" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span></li>
+					<li><img src="img/m2/m2 (1).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span></li>
+					<li><img src="img/m2/m2 (2).png" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span></li>
+					<li><img src="img/m2/m2 (7).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span></li>
+					<li><img src="img/m2/m2 (8).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span></li>
+				</ul>
+			</div>
+		</div>
+		<!-- main3 ----------------------------------------------->
+		<div class="main3-bj">
+			<div id="main3">
+				<div class="title">
+					<h2>智能硬件</h2>
+					<div class="btn">
+						<a href="list.html">查看全部</a>
+					</div>
+				</div>
+				<div class="m3-left left shadow-a">
+					<a href="javascript:;"><img src="img/m3/m3 (1).jpg" /></a>
+				</div>
+				<ul class = "m3-right left common shadow-ul">
+					<li><img src="img/m3/m3 (2).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span></li>
+					<li><img src="img/m3/m3 (3).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span></li>
+					<li><img src="img/m3/m3 (4).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span></li>
+					<li><img src="img/m3/m3 (5).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span></li>
+					<li><img src="img/m3/m3 (2).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span></li>
+					<li><img src="img/m3/m3 (3).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span></li>
+					<li><img src="img/m3/m3 (4).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span></li>
+					<li><img src="img/m3/m3 (6).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span></li>
+				</ul>
+			</div>
+		</div>
+		<!-- main4 ----------------------------------------------->
+		<div class="main4-bj">
+			<div id="main4">
+				<div class="title">
+					<h2>搭配</h2>
+					<div class="btn">
+						<a href="javascript:;">热门</a>
+						<a href="javascript:;">耳机音箱</a>
+						<a href="javascript:;">电源</a>
+						<a href="javascript:;">电池存储卡</a>
+					</div>
+				</div>
+				<div class="_common left shadow-a">
+					<a href="javascript:;"><img src="img/m5/m5 (1).jpg" /></a>
+					<a href="javascript:;"><img src="img/m4/m4 (2).jpg" /></a>
+				</div>
+				<ul class = "m4-right left common shadow-ul m4-active">
+					<li><img src="img/m4/m4 (3).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span><div><strong>这个小巧玲珑啊，比10400安的小了好多，感觉不错，...</strong><em> 来自于 LIN翼 的评价 </em></div></li>
+					<li><img src="img/m4/m4 (4).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span><div><strong>这个小巧玲珑啊，比10400安的小了好多，感觉不错，...</strong><em> 来自于 LIN翼 的评价 </em></div></li>
+					<li><img src="img/m4/m4 (5).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span><div><strong>这个小巧玲珑啊，比10400安的小了好多，感觉不错，...</strong><em> 来自于 LIN翼 的评价 </em></div></li>
+					<li><img src="img/m4/m4 (6).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span><div><strong>这个小巧玲珑啊，比10400安的小了好多，感觉不错，...</strong><em> 来自于 LIN翼 的评价 </em></div></li>
+					<li><img src="img/m4/m4 (7).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span><div><strong>这个小巧玲珑啊，比10400安的小了好多，感觉不错，...</strong><em> 来自于 LIN翼 的评价 </em></div></li>
+					<li><img src="img/m4/m4 (8).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span><div><strong>这个小巧玲珑啊，比10400安的小了好多，感觉不错，...</strong><em> 来自于 LIN翼 的评价 </em></div></li>
+					<li><img src="img/m4/m4 (9).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span><div><strong>这个小巧玲珑啊，比10400安的小了好多，感觉不错，...</strong><em> 来自于 LIN翼 的评价 </em></div></li>
+					<li><img src="img/m4/m4 (10).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span><div><strong>这个小巧玲珑啊，比10400安的小了好多，感觉不错，...</strong><em> 来自于 LIN翼 的评价 </em></div></li>
+				</ul>
+				<ul class = "m4-right left common shadow-ul">
+					<li><img src="img/m5/m5 (3).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span><div><strong>这个小巧玲珑啊，比10400安的小了好多，感觉不错，...</strong><em> 来自于 LIN翼 的评价 </em></div></li>
+					<li><img src="img/m5/m5 (4).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span><div><strong>这个小巧玲珑啊，比10400安的小了好多，感觉不错，...</strong><em> 来自于 LIN翼 的评价 </em></div></li>
+					<li><img src="img/m5/m5 (5).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span><div><strong>这个小巧玲珑啊，比10400安的小了好多，感觉不错，...</strong><em> 来自于 LIN翼 的评价 </em></div></li>
+					<li><img src="img/m5/m5 (6).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span><div><strong>这个小巧玲珑啊，比10400安的小了好多，感觉不错，...</strong><em> 来自于 LIN翼 的评价 </em></div></li>
+					<li><img src="img/m5/m5 (7).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span><div><strong>这个小巧玲珑啊，比10400安的小了好多，感觉不错，...</strong><em> 来自于 LIN翼 的评价 </em></div></li>
+					<li><img src="img/m5/m5 (8).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span><div><strong>这个小巧玲珑啊，比10400安的小了好多，感觉不错，...</strong><em> 来自于 LIN翼 的评价 </em></div></li>
+					<li><img src="img/m5/m5 (9).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span><div><strong>这个小巧玲珑啊，比10400安的小了好多，感觉不错，...</strong><em> 来自于 LIN翼 的评价 </em></div></li>
+					<li><img src="img/m5/m5 (10).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span><div><strong>这个小巧玲珑啊，比10400安的小了好多，感觉不错，...</strong><em> 来自于 LIN翼 的评价 </em></div></li>
+				</ul>
+				<ul class = "m4-right left common shadow-ul">
+					<li><img src="img/m4/m4 (3).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span><div><strong>这个小巧玲珑啊，比10400安的小了好多，感觉不错，...</strong><em> 来自于 LIN翼 的评价 </em></div></li>
+					<li><img src="img/m4/m4 (4).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span><div><strong>这个小巧玲珑啊，比10400安的小了好多，感觉不错，...</strong><em> 来自于 LIN翼 的评价 </em></div></li>
+					<li><img src="img/m4/m4 (5).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span><div><strong>这个小巧玲珑啊，比10400安的小了好多，感觉不错，...</strong><em> 来自于 LIN翼 的评价 </em></div></li>
+					<li><img src="img/m4/m4 (6).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span><div><strong>这个小巧玲珑啊，比10400安的小了好多，感觉不错，...</strong><em> 来自于 LIN翼 的评价 </em></div></li>
+					<li><img src="img/m4/m4 (7).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span><div><strong>这个小巧玲珑啊，比10400安的小了好多，感觉不错，...</strong><em> 来自于 LIN翼 的评价 </em></div></li>
+					<li><img src="img/m4/m4 (8).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span><div><strong>这个小巧玲珑啊，比10400安的小了好多，感觉不错，...</strong><em> 来自于 LIN翼 的评价 </em></div></li>
+					<li><img src="img/m4/m4 (9).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span><div><strong>这个小巧玲珑啊，比10400安的小了好多，感觉不错，...</strong><em> 来自于 LIN翼 的评价 </em></div></li>
+					<li><img src="img/m4/m4 (10).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span><div><strong>这个小巧玲珑啊，比10400安的小了好多，感觉不错，...</strong><em> 来自于 LIN翼 的评价 </em></div></li>
+				</ul>
+				<ul class = "m4-right left common shadow-ul">
+					<li><img src="img/m5/m5 (3).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span><div><strong>这个小巧玲珑啊，比10400安的小了好多，感觉不错，...</strong><em> 来自于 LIN翼 的评价 </em></div></li>
+					<li><img src="img/m5/m5 (4).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span><div><strong>这个小巧玲珑啊，比10400安的小了好多，感觉不错，...</strong><em> 来自于 LIN翼 的评价 </em></div></li>
+					<li><img src="img/m5/m5 (5).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span><div><strong>这个小巧玲珑啊，比10400安的小了好多，感觉不错，...</strong><em> 来自于 LIN翼 的评价 </em></div></li>
+					<li><img src="img/m5/m5 (6).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span><div><strong>这个小巧玲珑啊，比10400安的小了好多，感觉不错，...</strong><em> 来自于 LIN翼 的评价 </em></div></li>
+					<li><img src="img/m5/m5 (7).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span><div><strong>这个小巧玲珑啊，比10400安的小了好多，感觉不错，...</strong><em> 来自于 LIN翼 的评价 </em></div></li>
+					<li><img src="img/m5/m5 (8).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span><div><strong>这个小巧玲珑啊，比10400安的小了好多，感觉不错，...</strong><em> 来自于 LIN翼 的评价 </em></div></li>
+					<li><img src="img/m5/m5 (9).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span><div><strong>这个小巧玲珑啊，比10400安的小了好多，感觉不错，...</strong><em> 来自于 LIN翼 的评价 </em></div></li>
+					<li><img src="img/m5/m5 (10).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span><div><strong>这个小巧玲珑啊，比10400安的小了好多，感觉不错，...</strong><em> 来自于 LIN翼 的评价 </em></div></li>
+				</ul>
+			</div>
+		</div>
+		<!-- main5 ------------------------------------------------>
+		<div class="main5-bj">
+			<div id="main5">
+				<div class="title">
+					<h2>配件</h2>
+					<div class="btn">
+						<a href="javascript:;">热门</a>
+						<a href="javascript:;">保护套</a>
+						<a href="javascript:;">贴膜</a>
+						<a href="javascript:;">其他配件</a>
+					</div>
+				</div>
+				<div class="_common left shadow-a">
+					<a href="javascript:;"><img src="img/m5/m5 (1).jpg" /></a>
+					<a href="javascript:;"><img src="img/m5/m5 (2).jpg" /></a>
+				</div>
+				<ul class = "m5-right left common active shadow-ul">
+					<li><img src="img/m5/m5 (3).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span><div><strong>这个小巧玲珑啊，比10400安的小了好多，感觉不错，...</strong><em> 来自于 LIN翼 的评价 </em></div></li>
+					<li><img src="img/m5/m5 (4).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span><div><strong>这个小巧玲珑啊，比10400安的小了好多，感觉不错，...</strong><em> 来自于 LIN翼 的评价 </em></div></li>
+					<li><img src="img/m5/m5 (5).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span><div><strong>这个小巧玲珑啊，比10400安的小了好多，感觉不错，...</strong><em> 来自于 LIN翼 的评价 </em></div></li>
+					<li><img src="img/m5/m5 (6).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span><div><strong>这个小巧玲珑啊，比10400安的小了好多，感觉不错，...</strong><em> 来自于 LIN翼 的评价 </em></div></li>
+					<li><img src="img/m5/m5 (7).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span><div><strong>这个小巧玲珑啊，比10400安的小了好多，感觉不错，...</strong><em> 来自于 LIN翼 的评价 </em></div></li>
+					<li><img src="img/m5/m5 (8).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span><div><strong>这个小巧玲珑啊，比10400安的小了好多，感觉不错，...</strong><em> 来自于 LIN翼 的评价 </em></div></li>
+					<li><img src="img/m5/m5 (9).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span><div><strong>这个小巧玲珑啊，比10400安的小了好多，感觉不错，...</strong><em> 来自于 LIN翼 的评价 </em></div></li>
+					<li><img src="img/m5/m5 (10).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span><div><strong>这个小巧玲珑啊，比10400安的小了好多，感觉不错，...</strong><em> 来自于 LIN翼 的评价 </em></div></li>
+				</ul>
+			</div>
+		</div>
+		<!-- main6 -------------------------------------------------->
+		<div class="main6-bj">
+			<div id="main6">
+				<div class="title">
+					<h2>配件</h2>
+					<div class="btn">
+						<a href="javascript:;">热门</a>
+						<a href="javascript:;">保护套</a>
+						<a href="javascript:;">贴膜</a>
+						<a href="javascript:;">其他配件</a>
+					</div>
+				</div>
+				<div class="_common left shadow-a">
+					<a href="javascript:;"><img src="img/m6/m6 (1).jpg" /></a>
+					<a href="javascript:;"><img src="img/m6/m6 (2).jpg" /></a>
+				</div>
+				<ul class = "m6-right left common active shadow-ul">
+					<li><img src="img/m6/m6 (3).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span><div><strong>这个小巧玲珑啊，比10400安的小了好多，感觉不错，...</strong><em> 来自于 LIN翼 的评价 </em></div></li>
+					<li><img src="img/m6/m6 (4).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span><div><strong>这个小巧玲珑啊，比10400安的小了好多，感觉不错，...</strong><em> 来自于 LIN翼 的评价 </em></div></li>
+					<li><img src="img/m6/m6 (5).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span><div><strong>这个小巧玲珑啊，比10400安的小了好多，感觉不错，...</strong><em> 来自于 LIN翼 的评价 </em></div></li>
+					<li><img src="img/m6/m6 (6).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span><div><strong>这个小巧玲珑啊，比10400安的小了好多，感觉不错，...</strong><em> 来自于 LIN翼 的评价 </em></div></li>
+					<li><img src="img/m6/m6 (7).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span><div><strong>这个小巧玲珑啊，比10400安的小了好多，感觉不错，...</strong><em> 来自于 LIN翼 的评价 </em></div></li>
+					<li><img src="img/m6/m6 (8).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span><div><strong>这个小巧玲珑啊，比10400安的小了好多，感觉不错，...</strong><em> 来自于 LIN翼 的评价 </em></div></li>
+					<li><img src="img/m6/m6 (9).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span><div><strong>这个小巧玲珑啊，比10400安的小了好多，感觉不错，...</strong><em> 来自于 LIN翼 的评价 </em></div></li>
+					<li><img src="img/m6/m6 (10).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span><div><strong>这个小巧玲珑啊，比10400安的小了好多，感觉不错，...</strong><em> 来自于 LIN翼 的评价 </em></div></li>
+				</ul>
+			</div>
+		</div>
+		<!-- main7 -------------------------------------------------->
+		<div class="main7-bj">
+			<div id="main7">
+				<div class="title">
+					<h2>为你推荐</h2>
+					<div class="btn">
+						<button>&lt;</button>
+						<button disabled="disabled">&gt;</button>
+					</div>
+				</div>
+				<ul class = "common shadow-ul active">
+					<li><img src="img/m6/m6 (3).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span></li>
+					<li><img src="img/m6/m6 (4).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span></li>
+					<li><img src="img/m6/m6 (5).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span></li>
+					<li><img src="img/m6/m6 (6).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span></li>
+					<li><img src="img/m6/m6 (7).jpg" alt="" /><a href="javascript:;">小米手机5尊享版</a><p>4G内存+128G容量，陶瓷机身</p><span>2699元</span></li>
+				</ul>
+			</div>
+		</div>
+		<!--====================================================================-->
+		<div class="main8-bj">
+			<div id="main8">
+				<div class="title">
+					<h2>热评产品</h2>
+				</div>
+				<ul class = "list shadow-ul">
+					<li><a href="javascript:;"><img src="img/m8/m8 (4).jpg" alt="" /></a><p>一如既往的发烧体验，炫酷的外形，人性的设计，动听的音质！高中低音表现平衡，保持良好的音色体验</p><em>来自于aaaa的评价</em><span>小米头戴式耳机<strong>449</strong></span></li>
+					<li><a href="javascript:;"><img src="img/m8/m8 (2).jpg" alt="" /></a><p>一如既往的发烧体验，炫酷的外形，人性的设计，动听的音质！高中低音表现平衡，保持良好的音色体验</p><em>来自于aaaa的评价</em><span>小米头戴式耳机<strong>449</strong></span></li>
+					<li><a href="javascript:;"><img src="img/m8/m8 (3).jpg" alt="" /></a><p>一如既往的发烧体验，炫酷的外形，人性的设计，动听的音质！高中低音表现平衡，保持良好的音色体验</p><em>来自于aaaa的评价</em><span>小米头戴式耳机<strong>449</strong></span></li>
+					<li><a href="javascript:;"><img src="img/m8/m8 (1).jpg" alt="" /></a><p>一如既往的发烧体验，炫酷的外形，人性的设计，动听的音质！高中低音表现平衡，保持良好的音色体验</p><em>来自于aaaa的评价</em><span>小米头戴式耳机<strong>449</strong></span></li>
+				</ul>
+			</div>
+		</div>
+		<!-- main9 --------------------------------------------------->
+		<div class="main9-bj">
+			<div id="main9">
+				<div class="title">
+					<h2>内容</h2>
+				</div>
+				<ul class="list shadow-ul">
+					<li><h3>图书</h3><p>极花</p><span>贾平凹2016年全新长篇小说，一个被拐卖女孩的遭遇。</span><strong>9.99元</strong><img src="img/m9/m9 (1).jpg"></li>
+					<li><h3>图书</h3><p>极花</p><span>贾平凹2016年全新长篇小说，一个被拐卖女孩的遭遇。</span><strong>9.99元</strong><img src="img/m9/m9 (2).jpg"></li>
+					<li><h3>图书</h3><p>极花</p><span>贾平凹2016年全新长篇小说，一个被拐卖女孩的遭遇。</span><strong>9.99元</strong><img src="img/m9/m9 (3).jpg"></li>
+					<li><h3>图书</h3><p>极花</p><span>贾平凹2016年全新长篇小说，一个被拐卖女孩的遭遇。</span><strong>9.99元</strong><img src="img/m9/m9 (4).jpg"></li>
+				</ul>
+			</div>
+		</div>
+		<!--====================================================================-->
+		<!-- footer(load) -------------------------------------------->
+		<div id="footer"></div>
+		<script type="text/javascript">
+			$("#footer").load("footer.html");
+		</script>
+	</body>
+</html>
