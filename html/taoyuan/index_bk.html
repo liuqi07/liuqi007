@@ -31,7 +31,7 @@
             </div>
             <div class="right">
                 <!-- <div class="tip">注：<span>百里紫衣丷</span>账号被盗，有问题联系QQ：499162402</div> -->
-                <div class="tip"><span>注：我打算回归二统啦~预算2500左右，力蛮或者白马，如果好价格可以再商量，要男号，要能清的，有出坑的联系微信18911690880</span></div>
+                <div class="tip"><span>已回归一统~现在的游戏名叫【丷宫商角徵羽灬】另再收一个底子好的万攻物理轻甲，多修最好，必须全清，有意向的可以联系微信：18911690880</span></div>
                 <table class="table" id="table">
                     <tr><th class="first"></th><th>月</th><th>日</th><th>时</th><th>分</th></tr>
                     <tr><td class="first origin">第1次</td><td></td><td></td><td></td><td></td></tr>
@@ -46,17 +46,6 @@
                     <tr><td class="first blue">第1次</td><td></td><td></td><td></td><td></td></tr>
                     <tr><td class="first blue">第2次</td><td></td><td></td><td></td><td></td></tr>
                     <tr><td class="first blue">第3次</td><td></td><td></td><td></td><td></td></tr>
-                    <tr><td class="first origin">第1次</td><td></td><td></td><td></td><td></td></tr>
-                    <tr><td class="first origin">第2次</td><td></td><td></td><td></td><td></td></tr>
-                    <tr><td class="first origin">第3次</td><td></td><td></td><td></td><td></td></tr>
-                    <tr><td class="first blue">第1次</td><td></td><td></td><td></td><td></td></tr>
-                    <tr><td class="first blue">第2次</td><td></td><td></td><td></td><td></td></tr>
-                    <tr><td class="first blue">第3次</td><td></td><td></td><td></td><td></td></tr>
-                    <tr><td class="first origin">第1次</td><td></td><td></td><td></td><td></td></tr>
-                    <tr><td class="first origin">第2次</td><td></td><td></td><td></td><td></td></tr>
-                    <tr><td class="first origin">第3次</td><td></td><td></td><td></td><td></td></tr>
-                    <tr><td class="first blue">第1次</td><td></td><td></td><td></td><td></td></tr>
-                    <tr><td class="first blue">第2次</td><td></td><td></td><td></td><td></td></tr>
                 </table>
             </div>
             <div class="clear"></div>
@@ -170,7 +159,7 @@ $('#btn1').on('click', function(){
     // $('.box').removeClass('dn').addClass('db');
     // 镖与镖之间间隔10小时20分轮与轮之间间隔17小时38分钟
 
-    for(var i=count; i<=100; i++){
+    for(var i=count; i<=12; i++){
         // 每轮的第三次 (i+1)后就是下一轮第一次 +17:38
         if(i%3 === 0){
             // 如果分钟数+38大于了60
@@ -180,10 +169,10 @@ $('#btn1').on('click', function(){
             countDown(i, 10, 20);
         }
     }
-    // console.log(m);
-    // console.log(d);
-    // console.log(h);
-    // console.log(min);
+    console.log(m);
+    console.log(d);
+    console.log(h);
+    console.log(min);
     var str = '<tr>' +
                     '<th></th>' +
                     '<th>月</th>' +
@@ -191,9 +180,9 @@ $('#btn1').on('click', function(){
                     '<th>时</th>' +
                     '<th>分</th>' +
                 '</tr>';
-    for(var i=count; i<=23; i++){
+    for(var i=count; i<=12; i++){
 
-        console.log(m['m'+i]+'-'+d['d'+i]+' '+h['h'+i]+':'+min['min'+i]);
+        // console.log(m['m'+i]+'-'+d['d'+i]+' '+h['h'+i]+':'+min['min'+i]);
         str += '<tr class="'+ (Math.ceil(i/3)%2===1?'origin':'blue') +'">' +
                     '<td class="first">第'+ (i%3===0?3:i%3) +'次</td>' +
                     '<td>'+ m['m'+i] +'</td>' +
