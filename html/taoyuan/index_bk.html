@@ -46,6 +46,12 @@
                     <tr><td class="first blue">第1次</td><td></td><td></td><td></td><td></td></tr>
                     <tr><td class="first blue">第2次</td><td></td><td></td><td></td><td></td></tr>
                     <tr><td class="first blue">第3次</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td class="first origin">第1次</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td class="first origin">第2次</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td class="first origin">第3次</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td class="first blue">第1次</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td class="first blue">第2次</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td class="first blue">第3次</td><td></td><td></td><td></td><td></td></tr>
                 </table>
             </div>
             <div class="clear"></div>
@@ -59,7 +65,7 @@
 <script src="jsPdf.debug.js"></script> -->
 <script>
 
-var m = {}, d = {}, h = {}, min = {};
+var m = {}, d = {}, h = {}, min = {}, total=16;
 var count = 0;
 // 判断当前年份是否是闰年
 var year = Number(new Date().getFullYear());
@@ -159,7 +165,7 @@ $('#btn1').on('click', function(){
     // $('.box').removeClass('dn').addClass('db');
     // 镖与镖之间间隔10小时20分轮与轮之间间隔17小时38分钟
 
-    for(var i=count; i<=12; i++){
+    for(var i=count; i<=total; i++){
         // 每轮的第三次 (i+1)后就是下一轮第一次 +17:38
         if(i%3 === 0){
             // 如果分钟数+38大于了60
@@ -180,7 +186,7 @@ $('#btn1').on('click', function(){
                     '<th>时</th>' +
                     '<th>分</th>' +
                 '</tr>';
-    for(var i=count; i<=12; i++){
+    for(var i=count; i<=total; i++){
 
         // console.log(m['m'+i]+'-'+d['d'+i]+' '+h['h'+i]+':'+min['min'+i]);
         str += '<tr class="'+ (Math.ceil(i/3)%2===1?'origin':'blue') +'">' +

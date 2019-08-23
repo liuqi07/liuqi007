@@ -12,7 +12,7 @@
             s.parentNode.insertBefore(hm, s);
         })();
     </script>
-    <link rel="stylesheet" href="./style.css">          
+    <link rel="stylesheet" href="./express.css">
 </head>
 <body>
     <div class="bg">
@@ -59,7 +59,7 @@
 <script src="jsPdf.debug.js"></script> -->
 <script>
 
-var m = {}, d = {}, h = {}, min = {};
+var m = {}, d = {}, h = {}, min = {}, total = 100;
 var weeks = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
 var count = 0;
 // 判断当前年份是否是闰年
@@ -160,7 +160,7 @@ $('#btn1').on('click', function(){
     // $('.box').removeClass('dn').addClass('db');
     // 镖与镖之间间隔10小时20分轮与轮之间间隔17小时38分钟
 
-    for(var i=count; i<=12; i++){
+    for(var i=count; i<=total; i++){
         // 每轮的第三次 (i+1)后就是下一轮第一次 +17:38
         if(i%3 === 0){
             // 如果分钟数+38大于了60
@@ -183,7 +183,7 @@ $('#btn1').on('click', function(){
                     '<th>分</th>' +
                     '<th>轮次</th>' +
                 '</tr>';
-    for(var i=count; i<=12; i++){
+    for(var i=count; i<=total; i++){
 
         // console.log(m['m'+i]+'-'+d['d'+i]+' '+h['h'+i]+':'+min['min'+i]);
         var currYear = new Date().getFullYear();
