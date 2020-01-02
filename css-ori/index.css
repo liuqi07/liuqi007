@@ -70,6 +70,8 @@ body{overflow:hidden;}
 .dir .left{width:20vw;text-align: center;left:0vw;top:45vh;transform:rotateZ(-90deg);}
 .ll{animation: dirLeft 1s linear 1.5s forwards;}
 .dir .right{width:20vw;text-align: center;right:0vw;top:45vh;transform:rotateZ(-90deg);}
+.dir>p {position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); color: #999; font-size: 12px;}
+.dir>p a {color: #999;}
 .rr{animation: dirRight 1s linear 1.5s forwards;}
 
 /*---------------------------------------------------------------------------------------------------------*/
